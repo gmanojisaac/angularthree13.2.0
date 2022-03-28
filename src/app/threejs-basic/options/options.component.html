@@ -1,0 +1,35 @@
+<div fxLayout="column" style="background-color:  #FFFFB7; height:100vh;overflow-y: scroll;">
+    <div fxFlex="grow" style="overflow-y: auto;" fxLayoutAlign="center center">
+        <p>
+            <mat-chip-list class="mat-chip-list-stacked" aria-label="Fish selection">
+                <mat-chip color="primary" selected>ThreeJs App</mat-chip>
+            </mat-chip-list>
+        </p>
+    </div>
+    <div style="background-color: FFFFB7; margin:10em 0em; " fxLayoutAlign="center center">
+        <mat-chip-list class="mat-chip-list-stacked" aria-label="Fish selection">
+            <mat-chip color="accent" selected (click)="change3D(1)">Cube</mat-chip>
+            <mat-chip color="accent" selected (click)="change3D(2)">Spinning Cube</mat-chip>
+            <mat-chip color="accent" selected (click)="change3D(3)">Cube State</mat-chip>
+            <mat-chip color="accent" selected (click)="change3D(4)">Two Cubes</mat-chip>
+            <mat-chip color="accent" selected (click)="change3D(5)">Cube Lights</mat-chip>
+            <mat-chip color="accent" selected (click)="change3D(6)">Cube SpotLights</mat-chip>
+            <mat-chip color="accent" selected (click)="change3D(7)">Camera Control</mat-chip>
+        </mat-chip-list>
+    </div>
+    <div>
+        <div style="padding-bottom: 1em;" fxFlex="5em">
+    
+        </div>
+    
+        <button mat-raised-button color="primary" fxFlex (click)="goback()">
+          Back
+        </button>
+        <div style="padding-bottom: 1em;" fxFlex="5em">
+    
+        </div>
+      </div>
+      <div style="padding-bottom: 10px;">
+    
+      </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angularthree-23829": {
+      "hosting": {
+        "angularthree13.2.0": [
+          "angularthree-23829"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angularthree-23829"
+  }
+}

@@ -1,0 +1,38 @@
+<div style="height: 80vh; width: 100vw;" fxLayout="column" fxLayoutGap="2em">
+    <ngt-canvas [camera]="{position: [0, 0, 2]}">
+      <ngt-ambient-light></ngt-ambient-light>
+      <ngt-spot-light [position]="[1, 1, 1]"></ngt-spot-light>
+      <ngt-mesh
+        (animateReady)="
+            $event.object.rotation.x = $event.object.rotation.x + 0.01;
+            $event.object.rotation.y = $event.object.rotation.y + 0.01
+          "
+      >
+        <ngt-mesh-standard-material
+          [parameters]="{ color: 'turquoise' }"
+        ></ngt-mesh-standard-material>
+        <ngt-box-geometry></ngt-box-geometry>
+      </ngt-mesh>
+
+      <ngt-grid-helper></ngt-grid-helper>
+
+      <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+      
+    </ngt-canvas>
+  
+    <div>
+      <div style="padding-bottom: 1em;" fxFlex="5em">
+  
+      </div>
+  
+      <button mat-raised-button color="primary" fxFlex (click)="goback()">
+        Back
+      </button>
+      <div style="padding-bottom: 1em;" fxFlex="5em">
+  
+      </div>
+    </div>
+    <div style="padding-bottom: 10px;">
+  
+    </div>
+  </div>
