@@ -10,6 +10,8 @@ import { CubelightComponent } from './cubelight/cubelight.component';
 import { CubespotlightComponent } from './cubespotlight/cubespotlight.component';
 import { CameracontrolComponent } from './cameracontrol/cameracontrol.component';
 
+import {KinematicsComponent } from './kinematics/kinematics.component';
+
 const routes: Routes = [{   
   path: '',
   component: ThreejsBasicComponent ,
@@ -24,7 +26,10 @@ const routes: Routes = [{
         { path: 'twospin', component: TwospinComponent },
         { path: 'cubelight', component: CubelightComponent },
         { path: 'cubespotlight', component: CubespotlightComponent },
-        { path: 'cameracontrol', component: CameracontrolComponent }
+        { path: 'cameracontrol', component: CameracontrolComponent },
+        { path: 'kinematics', component: KinematicsComponent }
+        
+
       ]
     }]
   

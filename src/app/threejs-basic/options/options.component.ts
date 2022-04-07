@@ -35,7 +35,9 @@ export class OptionsComponent implements OnInit {
       case 7:
         this.router.navigate(['cameracontrol'], { relativeTo: this.route });
         break;
-
+      case 8:
+        this.router.navigate(['kinematics'], { relativeTo: this.route });
+        break;
     }
 
   }

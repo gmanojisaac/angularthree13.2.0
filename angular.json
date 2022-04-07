@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "d08fc567-a861-4321-a1dc-afd8bad2824d"
+    "analytics": "c5e18d99-944b-48d5-9b29-dc6417091e9e"
   },
   "version": 1,
   "newProjectRoot": "projects",
@@ -40,7 +40,8 @@
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "webWorkerTsConfig": "tsconfig.worker.json"
           },
           "configurations": {
             "production": {
@@ -124,6 +125,5 @@
         }
       }
     }
-  },
-  "defaultProject": "angularthree13.2.0"
+  }
 }
