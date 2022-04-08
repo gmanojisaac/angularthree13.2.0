@@ -13,7 +13,7 @@ import { TwospinComponent } from './twospin/twospin.component';
 import { CubelightComponent } from './cubelight/cubelight.component';
 import { CubespotlightComponent } from './cubespotlight/cubespotlight.component';
 import { CameracontrolComponent } from './cameracontrol/cameracontrol.component';
-import {KinematicsComponent, FirstPersonControlsComponent } from './kinematics/kinematics.component';
+import { KinematicsComponent, FirstPersonControlsComponent } from './kinematics/kinematics.component';
 
 import { NgtColorPipeModule, NgtCoreModule, NgtRadianPipeModule, NgtVectorPipeModule } from '@angular-three/core';
 import { NgtStatsModule } from '@angular-three/core/stats';
@@ -33,8 +33,19 @@ import { NgtSobaOrbitControlsModule } from '@angular-three/soba/controls';
 import { NgtCannonDebugModule } from '@angular-three/cannon/debug';
 
 
-import {NgtGridHelperModule} from '@angular-three/core/helpers';
+import { NgtGridHelperModule } from '@angular-three/core/helpers';
 import { NgtMeshBasicMaterialModule } from '@angular-three/core/materials';
+import {
+  MarmiImpComponent,
+  CardComponent,
+  RecipePreviewComponent 
+} from './marmi-imp/marmi-imp.component';
+
+import { MarmiReactComponent} from './marmi-react/marmi-react.component';
+import { RxStateComponent } from './rx-state/rx-state.component';
+import { RxStateSetupComponent } from './rx-state-setup/rx-state-setup.component';
+import { RxStateInputbindingComponent, InputBindingsStart } from './rx-state-inputbinding/rx-state-inputbinding.component';
+import { RxStateInputbindingSolComponent, InputBindingsStartSol } from './rx-state-inputbinding-sol/rx-state-inputbinding-sol.component';
 
 @NgModule({
   declarations: [
@@ -47,13 +58,20 @@ import { NgtMeshBasicMaterialModule } from '@angular-three/core/materials';
     CubelightComponent,
     CubespotlightComponent,
     CameracontrolComponent,
-    KinematicsComponent, FirstPersonControlsComponent
+    KinematicsComponent, FirstPersonControlsComponent, MarmiImpComponent,
+    CardComponent,
+    RecipePreviewComponent,
+    MarmiReactComponent,
+    RxStateComponent,
+    RxStateSetupComponent,
+    RxStateInputbindingComponent,InputBindingsStart, 
+    RxStateInputbindingSolComponent, InputBindingsStartSol
   ],
   imports: [
     CommonModule,
     ThreejsBasicRoutingModule,
     AppSharedModule,
-    
+
     NgtStatsModule,
     NgtBoxHelperModule,
     NgtArrowHelperModule,

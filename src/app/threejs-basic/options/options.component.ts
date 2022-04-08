@@ -38,6 +38,26 @@ export class OptionsComponent implements OnInit {
       case 8:
         this.router.navigate(['kinematics'], { relativeTo: this.route });
         break;
+      case 9:
+        this.router.navigate(['marmi-im'], { relativeTo: this.route });
+        break;
+      case 10:
+        this.router.navigate(['marmi-react'], { relativeTo: this.route });
+        break;
+
+      case 11:
+        this.router.navigate(['rxstate'], { relativeTo: this.route });
+        break;
+
+        case 15:
+          this.router.navigate(['rxstate-setup'], { relativeTo: this.route });
+          break;
+          case 16:
+            this.router.navigate(['rxstate-input'], { relativeTo: this.route });
+            break;
+            case 17:
+              this.router.navigate(['rxstate-inputsol'], { relativeTo: this.route });
+              break;
     }
 
   }
