@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RxStateSetupComponent } from './rx-state-setup.component';
+import { MarmiRxstateComponent } from './marmi-rxstate.component';
 
-describe('RxStateSetupComponent', () => {
-  let component: RxStateSetupComponent;
-  let fixture: ComponentFixture<RxStateSetupComponent>;
+describe('MarmiRxstateComponent', () => {
+  let component: MarmiRxstateComponent;
+  let fixture: ComponentFixture<MarmiRxstateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RxStateSetupComponent ]
+      declarations: [ MarmiRxstateComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RxStateSetupComponent);
+    fixture = TestBed.createComponent(MarmiRxstateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

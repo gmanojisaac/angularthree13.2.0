@@ -1,21 +1,27 @@
+<!-- Top navigation buttons. -->
 <ng-container *ngTemplateOutlet="navigation"></ng-container>
-
 <div class="container">
-  <wm-recipe-preview *ngIf="getRecipe() as recipe" [recipe]="recipe">
+  <wm-recipe-preview *ngIf="recipe$ | async as recipe" [recipe]="recipe">
   </wm-recipe-preview>
 </div>
-
 <!-- Bottom navigation buttons. -->
 <ng-container *ngTemplateOutlet="navigation"></ng-container>
-
 <!-- Navigation actions template. -->
 <ng-template #navigation>
-  <div *ngIf="recipes">
+  <div *ngIf="recipes$ | async">
     <button mat-button color="warn" (click)="reset()">RESET</button>
-    <button [disabled]="!hasPrevious()" mat-button (click)="previous()">
+    <button
+      [disabled]="(hasPrevious$ | async) !== true"
+      mat-button
+      (click)="previous()"
+    >
       PREVIOUS
     </button>
-    <button [disabled]="!hasNext()" mat-button (click)="next()">
+    <button
+      [disabled]="(hasNext$ | async) !== true"
+      mat-button
+      (click)="next()"
+    >
       NEXT
     </button>
   </div>

@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { ListServerItem } from '../threejs-basic/receipe';
 import { catchError, delay, distinctUntilChanged, filter, map } from 'rxjs/operators';
@@ -36,7 +35,7 @@ export class ListService {
 
   loadingSignal$ = this.state$.pipe(map(({ loading }) => loading));
 
-  constructor(private http: HttpClient) {
+  constructor() {
     this.state$.subscribe(console.log);
   }
 

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MarmiImpComponent } from './marmi-imp.component';
+import { RxstatePresenterComponent } from './rxstate-presenter.component';
 
-describe('MarmiImpComponent', () => {
-  let component: MarmiImpComponent;
-  let fixture: ComponentFixture<MarmiImpComponent>;
+describe('RxstatePresenterComponent', () => {
+  let component: RxstatePresenterComponent;
+  let fixture: ComponentFixture<RxstatePresenterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MarmiImpComponent ]
+      declarations: [ RxstatePresenterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MarmiImpComponent);
+    fixture = TestBed.createComponent(RxstatePresenterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

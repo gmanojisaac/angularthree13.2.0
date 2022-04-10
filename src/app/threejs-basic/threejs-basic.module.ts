@@ -35,17 +35,10 @@ import { NgtCannonDebugModule } from '@angular-three/cannon/debug';
 
 import { NgtGridHelperModule } from '@angular-three/core/helpers';
 import { NgtMeshBasicMaterialModule } from '@angular-three/core/materials';
-import {
-  MarmiImpComponent,
-  CardComponent,
-  RecipePreviewComponent 
-} from './marmi-imp/marmi-imp.component';
 
-import { MarmiReactComponent} from './marmi-react/marmi-react.component';
-import { RxStateComponent } from './rx-state/rx-state.component';
-import { RxStateSetupComponent } from './rx-state-setup/rx-state-setup.component';
-import { RxStateInputbindingComponent, InputBindingsStart } from './rx-state-inputbinding/rx-state-inputbinding.component';
-import { RxStateInputbindingSolComponent, InputBindingsStartSol } from './rx-state-inputbinding-sol/rx-state-inputbinding-sol.component';
+import { MarmiRxstateComponent,RecipePreviewComponent, CardComponent } from './marmi-rxstate/marmi-rxstate.component';
+import { RxstateExampleComponent,SideEffectsSolution } from './rxstate-example/rxstate-example.component';
+import { RxstatePresenterComponent, PresenterPatternSolution } from './rxstate-presenter/rxstate-presenter.component';
 
 @NgModule({
   declarations: [
@@ -58,14 +51,9 @@ import { RxStateInputbindingSolComponent, InputBindingsStartSol } from './rx-sta
     CubelightComponent,
     CubespotlightComponent,
     CameracontrolComponent,
-    KinematicsComponent, FirstPersonControlsComponent, MarmiImpComponent,
-    CardComponent,
-    RecipePreviewComponent,
-    MarmiReactComponent,
-    RxStateComponent,
-    RxStateSetupComponent,
-    RxStateInputbindingComponent,InputBindingsStart, 
-    RxStateInputbindingSolComponent, InputBindingsStartSol
+    KinematicsComponent, FirstPersonControlsComponent, 
+    MarmiRxstateComponent, RecipePreviewComponent, CardComponent, 
+    RxstateExampleComponent,SideEffectsSolution, RxstatePresenterComponent,PresenterPatternSolution
   ],
   imports: [
     CommonModule,
