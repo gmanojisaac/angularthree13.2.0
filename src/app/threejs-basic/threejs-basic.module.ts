@@ -19,9 +19,9 @@ import { NgtColorPipeModule, NgtCoreModule, NgtRadianPipeModule, NgtVectorPipeMo
 import { NgtStatsModule } from '@angular-three/core/stats';
 import { NgtInstancedMeshModule, NgtMeshModule } from '@angular-three/core/meshes';
 import { NgtGroupModule } from '@angular-three/core/group';
-import { NgtMeshLambertMaterialModule, NgtMeshStandardMaterialModule } from '@angular-three/core/materials';
+import { NgtMeshLambertMaterialModule, NgtMeshStandardMaterialModule,NgtShadowMaterialModule } from '@angular-three/core/materials';
 import { NgtBoxGeometryModule, NgtCylinderGeometryModule, NgtPlaneGeometryModule, NgtPolyhedronGeometryModule, NgtSphereGeometryModule, NgtTorusGeometryModule } from '@angular-three/core/geometries';
-import { NgtAmbientLightModule, NgtDirectionalLightModule, NgtPointLightModule, NgtSpotLightModule } from '@angular-three/core/lights';
+import { NgtHemisphereLightModule,NgtAmbientLightModule, NgtDirectionalLightModule, NgtPointLightModule, NgtSpotLightModule } from '@angular-three/core/lights';
 import { NgtArrowHelperModule, NgtBoxHelperModule } from '@angular-three/core/helpers';
 import { NgtInstancedBufferAttributeModule } from '@angular-three/core/attributes';
 
@@ -34,11 +34,17 @@ import { NgtCannonDebugModule } from '@angular-three/cannon/debug';
 
 
 import { NgtGridHelperModule } from '@angular-three/core/helpers';
-import { NgtMeshBasicMaterialModule } from '@angular-three/core/materials';
+import { NgtMeshBasicMaterialModule, NgtMeshPhongMaterialModule } from '@angular-three/core/materials';
 
 import { MarmiRxstateComponent,RecipePreviewComponent, CardComponent } from './marmi-rxstate/marmi-rxstate.component';
 import { RxstateExampleComponent,SideEffectsSolution } from './rxstate-example/rxstate-example.component';
 import { RxstatePresenterComponent, PresenterPatternSolution } from './rxstate-presenter/rxstate-presenter.component';
+import { CannonStartComponent,FloorComponent,CubeCannonComponent } from './cannon-start/cannon-start.component';
+import { CannonSingleComponent, PlaneSingleComponent, CubeSingleComponent } from './cannon-single/cannon-single.component';
+import { CannonKinematicComponent } from './cannon-kinematic/cannon-kinematic.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -53,7 +59,10 @@ import { RxstatePresenterComponent, PresenterPatternSolution } from './rxstate-p
     CameracontrolComponent,
     KinematicsComponent, FirstPersonControlsComponent, 
     MarmiRxstateComponent, RecipePreviewComponent, CardComponent, 
-    RxstateExampleComponent,SideEffectsSolution, RxstatePresenterComponent,PresenterPatternSolution
+    RxstateExampleComponent,SideEffectsSolution, RxstatePresenterComponent,PresenterPatternSolution, 
+    CannonStartComponent,FloorComponent,CubeCannonComponent, 
+    CannonSingleComponent, PlaneSingleComponent, CubeSingleComponent, CannonKinematicComponent
+
   ],
   imports: [
     CommonModule,
@@ -85,9 +94,11 @@ import { RxstatePresenterComponent, PresenterPatternSolution } from './rxstate-p
     NgtDirectionalLightModule,
     NgtSpotLightModule,
     NgtPointLightModule,
+    NgtHemisphereLightModule,
 
     NgtMeshLambertMaterialModule,
     NgtMeshStandardMaterialModule,
+    NgtShadowMaterialModule,
 
     NgtPhysicsModule,
     NgtPhysicBoxModule,
@@ -103,7 +114,8 @@ import { RxstatePresenterComponent, PresenterPatternSolution } from './rxstate-p
     NgtSobaTextModule,
 
     NgtGridHelperModule,
-    NgtMeshBasicMaterialModule
+    NgtMeshBasicMaterialModule,
+    NgtMeshPhongMaterialModule
 
   ]
 })

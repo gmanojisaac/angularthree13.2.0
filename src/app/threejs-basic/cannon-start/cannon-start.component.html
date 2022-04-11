@@ -1,0 +1,14 @@
+<ngt-canvas style="height: 80vh; width: 100vw;" fxLayout="column" fxLayoutGap="2em"
+[shadows]="true"
+[gl]="{ alpha: false }"
+[camera]="{ position: [-1, 5, 5], fov: 45 }"
+[scene]="{ background: 'lightblue' | color }"
+[initialLog]="true"
+>
+<!-- ... -->
+<ngt-physics>
+    <app-floor></app-floor>
+    <!-- 👇 put our Cube inside of ngt-physics -->
+    <app-cube-cannon></app-cube-cannon>
+</ngt-physics>
+</ngt-canvas>

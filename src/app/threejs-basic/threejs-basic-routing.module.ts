@@ -12,8 +12,9 @@ import { CameracontrolComponent } from './cameracontrol/cameracontrol.component'
 
 import {KinematicsComponent } from './kinematics/kinematics.component';
 import {MarmiRxstateComponent } from './marmi-rxstate/marmi-rxstate.component';
-import { RxstateExampleComponent } from './rxstate-example/rxstate-example.component';
 import { RxstatePresenterComponent } from './rxstate-presenter/rxstate-presenter.component';
+import { CannonStartComponent } from './cannon-start/cannon-start.component';
+import { CannonSingleComponent } from './cannon-single/cannon-single.component';
 
 
 const routes: Routes = [{   
@@ -34,6 +35,11 @@ const routes: Routes = [{
         { path: 'kinematics', component: KinematicsComponent },
         { path: 'marmi-rxstate', component: MarmiRxstateComponent },        
         { path: 'rxstate-presenter', component: RxstatePresenterComponent },
+        { path: 'cannon-start', component: CannonStartComponent },
+        { path: 'cannon-single', component: CannonSingleComponent }
+
+        
+
         
 
       ]

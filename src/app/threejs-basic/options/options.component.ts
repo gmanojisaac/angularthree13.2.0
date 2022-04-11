@@ -44,8 +44,19 @@ export class OptionsComponent implements OnInit {
       case 10:
         this.router.navigate(['rxstate'], { relativeTo: this.route });
         break;
-        case 11:
-          this.router.navigate(['rxstate-presenter'], { relativeTo: this.route });
+      case 11:
+        this.router.navigate(['rxstate-presenter'], { relativeTo: this.route });
+        break;
+
+      //cannon
+      case 50:
+        this.router.navigate(['cannon-start'], { relativeTo: this.route });
+        break;
+      case 51:
+        this.router.navigate(['cannon-single'], { relativeTo: this.route });
+        break;
+        case 52:
+          this.router.navigate(['cannon-kinematic'], { relativeTo: this.route });
           break;
     }
 
