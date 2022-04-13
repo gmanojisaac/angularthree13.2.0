@@ -1,0 +1,21 @@
+<ngt-canvas
+            [shadows]="true"
+            [camera]="{ position: [-1, 2, 4] }"
+            [scene]="{ background: '#a6d1f6' | color }"
+            style="height: 80vh; width: 100vw;"
+        >
+            <ngt-hemisphere-light></ngt-hemisphere-light>
+            <ngt-directional-light
+                [castShadow]="true"
+                [position]="[5, 10, 5]"
+            ></ngt-directional-light>
+
+            <ngt-physics [allowSleep]="true">
+                <ngt-cannon-debug [scale]="1.1">
+                    <storybook-plane></storybook-plane>
+                    <storybook-scalable-ball></storybook-scalable-ball>
+                </ngt-cannon-debug>
+            </ngt-physics>
+
+            <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+        </ngt-canvas>

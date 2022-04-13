@@ -19,8 +19,8 @@ import { NgtColorPipeModule, NgtCoreModule, NgtRadianPipeModule, NgtVectorPipeMo
 import { NgtStatsModule } from '@angular-three/core/stats';
 import { NgtInstancedMeshModule, NgtMeshModule } from '@angular-three/core/meshes';
 import { NgtGroupModule } from '@angular-three/core/group';
-import { NgtMeshLambertMaterialModule, NgtMeshStandardMaterialModule,NgtShadowMaterialModule } from '@angular-three/core/materials';
-import { NgtBoxGeometryModule, NgtCylinderGeometryModule, NgtPlaneGeometryModule, NgtPolyhedronGeometryModule, NgtSphereGeometryModule, NgtTorusGeometryModule } from '@angular-three/core/geometries';
+import {    NgtMeshNormalMaterialModule,NgtMeshLambertMaterialModule, NgtMeshStandardMaterialModule,NgtShadowMaterialModule } from '@angular-three/core/materials';
+import { NgtConeGeometryModule,NgtBoxGeometryModule, NgtCylinderGeometryModule, NgtPlaneGeometryModule, NgtPolyhedronGeometryModule, NgtSphereGeometryModule, NgtTorusGeometryModule } from '@angular-three/core/geometries';
 import { NgtHemisphereLightModule,NgtAmbientLightModule, NgtDirectionalLightModule, NgtPointLightModule, NgtSpotLightModule } from '@angular-three/core/lights';
 import { NgtArrowHelperModule, NgtBoxHelperModule } from '@angular-three/core/helpers';
 import { NgtInstancedBufferAttributeModule } from '@angular-three/core/attributes';
@@ -28,21 +28,50 @@ import { NgtInstancedBufferAttributeModule } from '@angular-three/core/attribute
 import { NgtPhysicsModule } from '@angular-three/cannon';
 import { NgtPhysicBoxModule, NgtPhysicCompoundModule, NgtPhysicConvexPolyhedronModule, NgtPhysicCylinderModule, NgtPhysicPlaneModule, NgtPhysicSphereModule, NgtPhysicTrimeshModule } from '@angular-three/cannon/bodies';
 
-import { NgtSobaTextModule } from '@angular-three/soba/abstractions';
-import { NgtSobaOrbitControlsModule } from '@angular-three/soba/controls';
+import { NgtSobaGradientTextureModule,NgtSobaTextModule, NgtSobaGizmoHelperModule } from '@angular-three/soba/abstractions';
+
+import { NgtSobaOrbitControlsModule} from '@angular-three/soba/controls';
 import { NgtCannonDebugModule } from '@angular-three/cannon/debug';
 
 
 import { NgtGridHelperModule } from '@angular-three/core/helpers';
 import { NgtMeshBasicMaterialModule, NgtMeshPhongMaterialModule } from '@angular-three/core/materials';
+import {
+  NgtSobaEnvironmentModule,
+  NgtSobaSkyModule,
+} from '@angular-three/soba/staging';
+
+import {NgtSobaQuadraticBezierLineModule ,NgtSobaLineModule,NgtSobaBillboardModule, NgtSobaCubicBezierLineModule } from '@angular-three/soba/abstractions';
+import { NgtEffectComposerModule } from '@angular-three/postprocessing';
+import { NgtSSAOModule } from '@angular-three/postprocessing/effects';
+import { NgtSobaLoaderModule } from '@angular-three/soba/loaders';
+import { NgtSobaHtmlModule } from '@angular-three/soba/misc';
+
+
+import { NgtPrimitiveModule } from '@angular-three/core/primitive';
+import { NgtSobaStageModule } from '@angular-three/soba/staging';
+
 
 import { MarmiRxstateComponent,RecipePreviewComponent, CardComponent } from './marmi-rxstate/marmi-rxstate.component';
 import { RxstateExampleComponent,SideEffectsSolution } from './rxstate-example/rxstate-example.component';
 import { RxstatePresenterComponent, PresenterPatternSolution } from './rxstate-presenter/rxstate-presenter.component';
 import { CannonStartComponent,FloorComponent,CubeCannonComponent } from './cannon-start/cannon-start.component';
 import { CannonSingleComponent, PlaneSingleComponent, CubeSingleComponent } from './cannon-single/cannon-single.component';
-import { CannonKinematicComponent } from './cannon-kinematic/cannon-kinematic.component';
+import { CannonKinematicComponent,BoxComponent, InstancedSpheresComponent, PlaneComponent } from './cannon-kinematic/cannon-kinematic.component';
+import { CannonCompoundComponent,PlaneCompoundComponent,CompoundComponent } from './cannon-compound/cannon-compound.component';
+import { CannonClumpComponent, ClumpComponent,PointerComponent} from './cannon-clump/cannon-clump.component';
+import { CannonSphereComponent,PlaneSphereComponent,ScalableBallComponent } from './cannon-sphere/cannon-sphere.component';
 
+//,MarkerComponent,EarthComponent 
+import { SobaBillboardComponent} from './soba-billboard/soba-billboard.component';
+
+
+import { EarthMarkerComponentModule } from './earth-marker/earth-marker.component';
+import { KeenComponentModule } from './keen-bloom/keen-bloom.component';
+import { KinematicCubeComponentModule } from './kinematic-cube/kinematic-cube.component';
+import { SimpleCubeComponentModule } from './simple-cube/simple-cube.component';
+import { TransformControlsDemoComponentModule } from './transform-controls-demo/transform-controls-demo.component';
+import { DemoCubeComponent, CubedemoComponent } from './demo-cube/demo-cube.component';
 
 
 
@@ -61,8 +90,16 @@ import { CannonKinematicComponent } from './cannon-kinematic/cannon-kinematic.co
     MarmiRxstateComponent, RecipePreviewComponent, CardComponent, 
     RxstateExampleComponent,SideEffectsSolution, RxstatePresenterComponent,PresenterPatternSolution, 
     CannonStartComponent,FloorComponent,CubeCannonComponent, 
-    CannonSingleComponent, PlaneSingleComponent, CubeSingleComponent, CannonKinematicComponent
+    CannonSingleComponent, PlaneSingleComponent, CubeSingleComponent, 
+    CannonKinematicComponent, BoxComponent, InstancedSpheresComponent,PlaneComponent, 
+    CannonCompoundComponent, PlaneCompoundComponent,CompoundComponent,
+    CannonClumpComponent, ClumpComponent,PointerComponent,
+    CannonSphereComponent ,PlaneSphereComponent,ScalableBallComponent, 
+//, MarkerComponent,EarthComponent
+    SobaBillboardComponent, 
+    DemoCubeComponent,CubedemoComponent
 
+    
   ],
   imports: [
     CommonModule,
@@ -86,6 +123,7 @@ import { CannonKinematicComponent } from './cannon-kinematic/cannon-kinematic.co
     NgtPlaneGeometryModule,
     NgtSphereGeometryModule,
     NgtCylinderGeometryModule,
+    NgtConeGeometryModule,
     NgtTorusGeometryModule,
     NgtPolyhedronGeometryModule,
     NgtInstancedBufferAttributeModule,
@@ -99,6 +137,7 @@ import { CannonKinematicComponent } from './cannon-kinematic/cannon-kinematic.co
     NgtMeshLambertMaterialModule,
     NgtMeshStandardMaterialModule,
     NgtShadowMaterialModule,
+    NgtMeshNormalMaterialModule,
 
     NgtPhysicsModule,
     NgtPhysicBoxModule,
@@ -115,8 +154,26 @@ import { CannonKinematicComponent } from './cannon-kinematic/cannon-kinematic.co
 
     NgtGridHelperModule,
     NgtMeshBasicMaterialModule,
-    NgtMeshPhongMaterialModule
-
+    NgtMeshPhongMaterialModule,
+    NgtSobaEnvironmentModule,
+    NgtSobaSkyModule,
+    NgtEffectComposerModule,
+    NgtSSAOModule,
+    NgtSobaLoaderModule,
+    NgtSobaBillboardModule,
+    NgtSobaGizmoHelperModule,
+    NgtSobaGradientTextureModule,
+    NgtSobaLineModule,
+    NgtSobaCubicBezierLineModule,
+    NgtSobaQuadraticBezierLineModule,
+    SimpleCubeComponentModule,
+    TransformControlsDemoComponentModule,
+    KeenComponentModule,
+    KinematicCubeComponentModule,
+    //EarthMarkerComponentModule
+    NgtSobaHtmlModule,
+    NgtPrimitiveModule,
+    NgtSobaStageModule
   ]
 })
 export class ThreejsBasicModule { }

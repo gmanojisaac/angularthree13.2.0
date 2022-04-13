@@ -1,0 +1,47 @@
+<ngt-canvas
+[shadows]="true"
+[camera]="{ position: [-2, 1, 7], fov: 50 }"
+[scene]="{ background: '#f6d186' | color }"
+style="height: 80vh; width: 100vw;"
+>
+<ngt-stats></ngt-stats>
+<ngt-hemisphere-light [intensity]="0.35"></ngt-hemisphere-light>
+<ngt-spot-light
+    [intensity]="2"
+    [args]="[undefined, undefined, undefined, 0.3, 1]"
+    [castShadow]="true"
+    [position]="[5, 5, 5]"
+    [shadow]="{ mapSize: [1028, 1028] | vector2 }"
+></ngt-spot-light>
+
+<ngt-physics [iterations]="6" [gravity]="[0, -9.81, 0]">
+    <ngt-cannon-debug [scale]="1.1" color="black">
+        <ngt-plane [rotation]="[-(90 | radian), 0, 0]"></ngt-plane>
+        <ngt-compound
+            [position]="[1.5, 5, 0.5]"
+            [rotation]="[1.25, 0, 0]"
+        ></ngt-compound>
+        <ngt-compound
+            [position]="[2.5, 3, 0.25]"
+            [rotation]="[1.25, -1.25, 0]"
+            (positionChange)="!isCopied && (position = $event)"
+            (rotationChange)="!isCopied && (rotation = $event)"
+        ></ngt-compound>
+
+        <ngt-compound
+            *ngIf="ready$ | async"
+            [position]="[2.5, 4, 0.25]"
+            [rotation]="[1.25, -1.25, 0]"
+        ></ngt-compound>
+
+        <ngt-compound
+            *ngIf="copy$ | async"
+            [isTrigger]="true"
+            [mass]="0"
+            [position]="position"
+            [rotation]="rotation"
+        ></ngt-compound>
+        ,
+    </ngt-cannon-debug>
+</ngt-physics>
+</ngt-canvas>

@@ -15,7 +15,13 @@ import {MarmiRxstateComponent } from './marmi-rxstate/marmi-rxstate.component';
 import { RxstatePresenterComponent } from './rxstate-presenter/rxstate-presenter.component';
 import { CannonStartComponent } from './cannon-start/cannon-start.component';
 import { CannonSingleComponent } from './cannon-single/cannon-single.component';
+import { CannonKinematicComponent } from './cannon-kinematic/cannon-kinematic.component';
+import { CannonCompoundComponent } from './cannon-compound/cannon-compound.component';
+import { CannonClumpComponent } from './cannon-clump/cannon-clump.component';
+import { CannonSphereComponent } from './cannon-sphere/cannon-sphere.component';
 
+import { SobaBillboardComponent } from './soba-billboard/soba-billboard.component';
+import { DemoCubeComponent } from './demo-cube/demo-cube.component';
 
 const routes: Routes = [{   
   path: '',
@@ -36,12 +42,14 @@ const routes: Routes = [{
         { path: 'marmi-rxstate', component: MarmiRxstateComponent },        
         { path: 'rxstate-presenter', component: RxstatePresenterComponent },
         { path: 'cannon-start', component: CannonStartComponent },
-        { path: 'cannon-single', component: CannonSingleComponent }
-
-        
-
-        
-
+        { path: 'cannon-single', component: CannonSingleComponent },        
+        { path: 'cannon-kinematic', component: CannonKinematicComponent },
+        { path: 'cannon-compound', component: CannonCompoundComponent },
+        { path: 'cannon-clump', component: CannonClumpComponent },        
+        { path: 'cannon-sphere', component: CannonSphereComponent },        
+        { path: 'soba-billboard', component: SobaBillboardComponent },        
+        { path: 'demo-cube', component: DemoCubeComponent }  
+               
       ]
     }]
   

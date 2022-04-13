@@ -47,6 +47,14 @@ export class OptionsComponent implements OnInit {
       case 11:
         this.router.navigate(['rxstate-presenter'], { relativeTo: this.route });
         break;
+      case 12:
+        this.router.navigate(['demo-cube'], { relativeTo: this.route });
+        break;
+
+      //soba
+      case 15:
+        this.router.navigate(['soba-billboard'], { relativeTo: this.route });
+        break;
 
       //cannon
       case 50:
@@ -55,9 +63,18 @@ export class OptionsComponent implements OnInit {
       case 51:
         this.router.navigate(['cannon-single'], { relativeTo: this.route });
         break;
-        case 52:
-          this.router.navigate(['cannon-kinematic'], { relativeTo: this.route });
-          break;
+      case 52:
+        this.router.navigate(['cannon-kinematic'], { relativeTo: this.route });
+        break;
+      case 53:
+        this.router.navigate(['cannon-compound'], { relativeTo: this.route });
+        break;
+      case 54:
+        this.router.navigate(['cannon-clump'], { relativeTo: this.route });
+        break;
+      case 55:
+        this.router.navigate(['cannon-sphere'], { relativeTo: this.route });
+        break;
     }
 
   }

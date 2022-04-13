@@ -1,0 +1,190 @@
+<!--div fxLayout="column" style="height: 50vh; width: 50vw;">
+
+<ngt-canvas style="height: 50vh"
+  [shadows]="true"
+  [camera]="{position: [0,0,10], fov: 75}"
+  [scene]='{background: "black" | color}'
+>
+  <ngt-stats></ngt-stats>
+
+  <ng-container *ngIf="true">
+    <ngt-ambient-light [intensity]="0.8"></ngt-ambient-light>
+    <ngt-point-light [intensity]="1" [position]="[0, 6, 0]"></ngt-point-light>
+  </ng-container>
+
+  <ngt-soba-orbit-controls
+    (ready)="$event.enablePan = true; $event.zoomSpeed = 0.5"
+  ></ngt-soba-orbit-controls>
+
+  <ngt-plane-geometry
+    #planeGeometry="ngtPlaneGeometry"
+    [args]="[3, 2]"
+  ></ngt-plane-geometry>
+
+  <ngt-soba-billboard [position]="[-4, -2, 0]">
+    <ngt-mesh [geometry]="planeGeometry.geometry">
+      <ngt-mesh-standard-material
+        [parameters]="{ color: 'red' }"
+      ></ngt-mesh-standard-material>
+    </ngt-mesh>
+  </ngt-soba-billboard>
+
+  <ngt-soba-billboard [position]="[-4, 2, 0]">
+    <ngt-mesh [geometry]="planeGeometry.geometry">
+      <ngt-mesh-standard-material
+        [parameters]="{ color: 'orange' }"
+      ></ngt-mesh-standard-material>
+    </ngt-mesh>
+  </ngt-soba-billboard>
+
+  <ngt-soba-billboard [position]="[0, 0, 0]">
+    <ngt-mesh [geometry]="planeGeometry.geometry">
+      <ngt-mesh-standard-material
+        [parameters]="{ color: 'green' }"
+      ></ngt-mesh-standard-material>
+    </ngt-mesh>
+  </ngt-soba-billboard>
+
+  <ngt-soba-billboard [position]="[4, -2, 0]">
+    <ngt-mesh [geometry]="planeGeometry.geometry">
+      <ngt-mesh-standard-material
+        [parameters]="{ color: 'blue' }"
+      ></ngt-mesh-standard-material>
+    </ngt-mesh>
+  </ngt-soba-billboard>
+
+  <ngt-soba-billboard [position]="[4, 2, 0]">
+    <ngt-mesh [geometry]="planeGeometry.geometry">
+      <ngt-mesh-standard-material
+        [parameters]="{ color: 'yellow' }"
+      ></ngt-mesh-standard-material>
+    </ngt-mesh>
+  </ngt-soba-billboard>
+</ngt-canvas>
+
+<ngt-canvas style="height: 50vh"
+  [shadows]="true"
+  [camera]="{position: [0,0,10], fov: 75}"
+  [scene]='{background: "black" | color}'
+
+>
+  <ngt-stats></ngt-stats>
+
+  <ng-container *ngIf="true">
+    <ngt-ambient-light [intensity]="0.8"></ngt-ambient-light>
+    <ngt-point-light [intensity]="1" [position]="[0, 6, 0]"></ngt-point-light>
+  </ng-container>
+
+  <ngt-soba-orbit-controls
+    *ngIf="false"
+    [makeDefault]="false"
+  ></ngt-soba-orbit-controls>
+
+  <ngt-soba-orbit-controls
+    (ready)="$event.enablePan = true; $event.zoomSpeed = 0.5"
+  ></ngt-soba-orbit-controls>
+
+  <ngt-soba-billboard [position]="[0.5, 2.05, 0.5]">
+    <ngt-soba-text
+      text="box"
+      [fontSize]="1"
+      outlineWidth="5%"
+      outlineColor="#000000"
+      [outlineOpacity]="1"
+    ></ngt-soba-text>
+  </ngt-soba-billboard>
+
+  <ngt-mesh [position]="[0.5, 1, 0.5]">
+    <ngt-box-geometry></ngt-box-geometry>
+    <ngt-mesh-standard-material
+      [parameters]="{ color: 'red' }"
+    ></ngt-mesh-standard-material>
+  </ngt-mesh>
+
+  <ngt-group [position]="[-2.5, -3, -1]">
+    <ngt-soba-billboard [position]="[0, 1.05, 0]">
+      <ngt-soba-text
+        text="cone"
+   
+        [fontSize]="1"
+        outlineWidth="5%"
+        outlineColor="#000000"
+        [outlineOpacity]="1"
+      ></ngt-soba-text>
+    </ngt-soba-billboard>
+
+    <ngt-mesh>
+      <ngt-cone-geometry></ngt-cone-geometry>
+      <ngt-mesh-standard-material
+        [parameters]="{ color: 'green' }"
+      ></ngt-mesh-standard-material>
+    </ngt-mesh>
+  </ngt-group>
+
+  <ngt-soba-billboard [position]="[0, 0, -5]">
+    <ngt-mesh>
+      <ngt-plane-geometry [args]="[2, 2]"></ngt-plane-geometry>
+      <ngt-mesh-standard-material
+        [parameters]="{ color: '#000066' }"
+      ></ngt-mesh-standard-material>
+    </ngt-mesh>
+  </ngt-soba-billboard>
+</ngt-canvas>
+
+
+</div>
+
+<div fxLayout="column" style="height: 50vh; width: 50vw;">
+
+
+  <ngt-canvas style="height: 50vh"
+  [shadows]="true"
+  [camera]="{position: [-5,5,5], fov: 75}"
+  [scene]='{background: "black" | color}'
+>
+  <ngt-stats></ngt-stats>
+
+  <ng-container *ngIf="true">
+    <ngt-ambient-light [intensity]="0.8"></ngt-ambient-light>
+    <ngt-point-light [intensity]="1" [position]="[0, 6, 0]"></ngt-point-light>
+  </ng-container>
+
+  <ngt-soba-orbit-controls
+    *ngIf="true"
+    [makeDefault]="false"
+  ></ngt-soba-orbit-controls>
+
+  <ngt-mesh>
+    <ngt-plane-geometry></ngt-plane-geometry>
+    <ngt-mesh-basic-material
+      [parameters]='{depthWrite: false }'
+    >
+      <ngt-soba-gradient-texture
+        [stops]="[0, 1]"
+        [colors]='["aquamarine", "hotpink"]'
+      ></ngt-soba-gradient-texture>
+    </ngt-mesh-basic-material>
+  </ngt-mesh>
+</ngt-canvas>
+
+
+</div-->
+
+        <!--        <demo-simple-cube></demo-simple-cube>-->
+        <!--        <demo-transform-controls></demo-transform-controls>-->
+        <!--        <demo-keen-bloom></demo-keen-bloom>-->
+        <!--        <demo-kinematic-cube></demo-kinematic-cube>-->
+       
+        <!--ngt-canvas [initialLog]="true" [dpr]="[1, 2]" [camera]="{ fov: 50 }"
+        style="height: 50vh; width: 50vw;"
+        >
+            <ngt-soba-stage [controls]="ngtSobaOrbitControls.controls">
+                <demo-earth></demo-earth>
+            </ngt-soba-stage>
+
+            <ngt-soba-orbit-controls
+                #ngtSobaOrbitControls="ngtSobaOrbitControls"
+                (ready)="$event.autoRotate = true"
+            ></ngt-soba-orbit-controls>
+        </ngt-canvas-->
+        

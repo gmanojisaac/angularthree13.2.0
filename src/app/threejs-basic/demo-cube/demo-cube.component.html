@@ -1,0 +1,19 @@
+<ngt-canvas [camera]="{ position: [5, 5, 5] }" style="height: 80vh; width: 100vw;" >
+    <ngt-ambient-light></ngt-ambient-light>
+    <ngt-spot-light [position]="[5, 5, 5]"></ngt-spot-light>
+
+    <ngt-group
+        [ngtBoxHelper]="['red']"
+        (animateReady)="onGroupAnimate($event.object)"
+    >
+        <demo-cube [position]="[2, 0, 0]"></demo-cube>
+        <demo-cube [position]="[-2, 0, 0]"></demo-cube>
+        <demo-cube [position]="[0, 0, 2]"></demo-cube>
+        <demo-cube [position]="[0, 0, -2]"></demo-cube>
+    </ngt-group>
+
+    <ngt-grid-helper></ngt-grid-helper>
+    <ngt-soba-orbit-controls></ngt-soba-orbit-controls>
+
+    <ngt-stats></ngt-stats>
+</ngt-canvas>

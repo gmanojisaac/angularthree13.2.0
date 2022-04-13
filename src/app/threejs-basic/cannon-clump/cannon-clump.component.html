@@ -1,0 +1,28 @@
+<ngt-canvas style="height: 80vh; width: 100vw;"
+            [shadows]="true"
+            [dpr]="[1, 2]"
+            [camera]="{ position: [0, 0, 20], fov: 35, near: 1, far: 40 }"
+        >
+            <ngt-ambient-light [intensity]="0.25"></ngt-ambient-light>
+            <ngt-spot-light
+                [args]="[undefined, 1, undefined, 0.2, 1]"
+                [position]="[30, 30, 30]"
+                [castShadow]="true"
+                [shadow]="{ mapSize: [512, 512] | vector2 }"
+            ></ngt-spot-light>
+            <ngt-directional-light
+                [intensity]="5"
+                [position]="[-10, -10, -10]"
+                color="purple"
+            ></ngt-directional-light>
+
+            <ngt-physics [gravity]="[0, 2, 0]" [iterations]="10">
+                <storybook-pointer></storybook-pointer>
+                <storybook-clump></storybook-clump>
+            </ngt-physics>
+            <ngt-soba-sky></ngt-soba-sky>
+            <ngt-soba-environment preset="sunset"></ngt-soba-environment>
+            <ngt-effect-composer>
+                <ngt-ssao></ngt-ssao>
+            </ngt-effect-composer>
+        </ngt-canvas>
