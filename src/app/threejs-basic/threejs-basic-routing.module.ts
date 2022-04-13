@@ -22,6 +22,10 @@ import { CannonSphereComponent } from './cannon-sphere/cannon-sphere.component';
 
 import { SobaBillboardComponent } from './soba-billboard/soba-billboard.component';
 import { DemoCubeComponent } from './demo-cube/demo-cube.component';
+import { KeenBloomComponent } from './keen-bloom/keen-bloom.component';
+import { EarthMarkerComponent } from './earth-marker/earth-marker.component';
+import { KinematicCubeComponent } from './kinematic-cube/kinematic-cube.component';
+import { TransformControlsDemoComponent } from './transform-controls-demo/transform-controls-demo.component';
 
 const routes: Routes = [{   
   path: '',
@@ -48,8 +52,12 @@ const routes: Routes = [{
         { path: 'cannon-clump', component: CannonClumpComponent },        
         { path: 'cannon-sphere', component: CannonSphereComponent },        
         { path: 'soba-billboard', component: SobaBillboardComponent },        
-        { path: 'demo-cube', component: DemoCubeComponent }  
-               
+        { path: 'demo-cube', component: DemoCubeComponent }  ,        
+        { path: 'demo-keen', component: KeenBloomComponent } ,        
+        { path: 'demo-kine', component: KinematicCubeComponent },     
+        { path: 'demo-earth', component: EarthMarkerComponent },    
+        { path: 'demo-transform', component: TransformControlsDemoComponent }     
+        
       ]
     }]
   

@@ -1,17 +1,5 @@
-import { NgtColorPipeModule, NgtCoreModule } from '@angular-three/core';
-import { NgtBoxGeometryModule } from '@angular-three/core/geometries';
-import {
-    NgtAmbientLightModule,
-    NgtPointLightModule,
-} from '@angular-three/core/lights';
-import { NgtMeshBasicMaterialModule } from '@angular-three/core/materials';
-import { NgtMeshModule } from '@angular-three/core/meshes';
-import { NgtStatsModule } from '@angular-three/core/stats';
-import {
-    NgtSobaOrbitControlsModule,
-    NgtSobaTransformControlsModule,
-} from '@angular-three/soba/controls';
-import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
+
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
     selector: 'demo-transform-controls',
@@ -20,6 +8,7 @@ import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
             [shadows]="true"
             [camera]="{ position: [-5, 5, 5], fov: 75 }"
             [scene]="{ background: 'black' | color }"
+            style="height:100vh; width: 100vw;"
         >
             <ngt-stats></ngt-stats>
 
@@ -46,21 +35,3 @@ import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TransformControlsDemoComponent {}
-
-@NgModule({
-    declarations: [TransformControlsDemoComponent],
-    exports: [TransformControlsDemoComponent],
-    imports: [
-        NgtCoreModule,
-        NgtColorPipeModule,
-        NgtStatsModule,
-        NgtAmbientLightModule,
-        NgtPointLightModule,
-        NgtSobaOrbitControlsModule,
-        NgtSobaTransformControlsModule,
-        NgtMeshModule,
-        NgtBoxGeometryModule,
-        NgtMeshBasicMaterialModule,
-    ],
-})
-export class TransformControlsDemoComponentModule {}

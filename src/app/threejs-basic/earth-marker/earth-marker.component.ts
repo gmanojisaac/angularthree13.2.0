@@ -1,35 +1,26 @@
 import {
-    NgtCoreModule,
     NgtEuler,
-    NgtRadianPipeModule,
     NgtVector3,
 } from '@angular-three/core';
-import { NgtGroupModule } from '@angular-three/core/group';
-import { NgtAmbientLightModule } from '@angular-three/core/lights';
-import { NgtMeshModule } from '@angular-three/core/meshes';
-import { NgtPrimitiveModule } from '@angular-three/core/primitive';
-import { NgtSobaOrbitControlsModule } from '@angular-three/soba/controls';
+
 import { NgtGLTFLoader } from '@angular-three/soba/loaders';
-import { NgtSobaHtmlModule } from '@angular-three/soba/misc';
-import { NgtSobaStageModule } from '@angular-three/soba/staging';
-import { CommonModule } from '@angular/common';
+
 import {
     ChangeDetectionStrategy,
     Component,
     Input,
-    NgModule,
     NgZone,
 } from '@angular/core';
-
+import { faLocationArrow } from '@fortawesome/free-solid-svg-icons/faLocationArrow';
 
 @Component({
     selector: 'demo-earth-marker',
     template: `
-        <ngt-canvas [initialLog]="true" [dpr]="[1, 2]" [camera]="{ fov: 50 }"
-        style="height: 50vh; width: 50vw;"
-        >
-            <ngt-soba-stage [controls]="ngtSobaOrbitControls.controls">
-                <demo-earth></demo-earth>
+
+        <ngt-canvas [initialLog]="true" [dpr]="[1, 2]" [camera]="{ fov: 50 }" style="height:100vh; width: 100vw;"  >
+
+        <ngt-soba-stage [controls]="ngtSobaOrbitControls.controls" >
+                <demo-earth ></demo-earth>
             </ngt-soba-stage>
 
             <ngt-soba-orbit-controls
@@ -37,17 +28,18 @@ import {
                 (ready)="$event.autoRotate = true"
             ></ngt-soba-orbit-controls>
         </ngt-canvas>
+
     `,
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EarthMarkerComponent {
-
+    
 }
 
 @Component({
     selector: 'demo-earth',
     template: `
-        <ng-container *ngIf="earth$ | async as earth">
+        <ng-container *ngIf="earth$ | async as earth"  >
             <ngt-group [dispose]="null">
                 <ngt-group
                     [rotation]="[-90 | radian, 0, 0.05]"
@@ -111,7 +103,7 @@ export class EarthComponent {
                 opacity: hidden ? '0' : '1'
             }"
         >
-
+        <fa-icon [icon]="faMarker" [styles]="{ color: 'red' }"></fa-icon>
         </ngt-soba-html>
     `,
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -123,8 +115,8 @@ export class MarkerComponent {
     @Input() color = '';
 
     hidden = false;
-
-
+    
+    faMarker = faLocationArrow;
     constructor(private zone: NgZone) {}
 
     get parentStyle(): Partial<CSSStyleDeclaration> {
@@ -141,21 +133,3 @@ export class MarkerComponent {
         });
     }
 }
-
-@NgModule({
-    declarations: [EarthMarkerComponent, EarthComponent, MarkerComponent],
-    exports: [EarthMarkerComponent],
-    imports: [
-        NgtCoreModule,
-        NgtSobaStageModule,
-        NgtSobaOrbitControlsModule,
-        CommonModule,
-        NgtSobaHtmlModule,
-        NgtGroupModule,
-        NgtMeshModule,
-        NgtRadianPipeModule,
-        NgtPrimitiveModule,
-        NgtAmbientLightModule,
-    ],
-})
-export class EarthMarkerComponentModule {}

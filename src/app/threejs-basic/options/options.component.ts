@@ -50,9 +50,21 @@ export class OptionsComponent implements OnInit {
       case 12:
         this.router.navigate(['demo-cube'], { relativeTo: this.route });
         break;
+      case 13:
+        this.router.navigate(['demo-keen'], { relativeTo: this.route });
+        break;
 
-      //soba
+      case 14:
+        this.router.navigate(['demo-kine'], { relativeTo: this.route });
+        break;
       case 15:
+        this.router.navigate(['demo-transform'], { relativeTo: this.route });
+        break;
+        case 16:
+          this.router.navigate(['demo-earth'], { relativeTo: this.route });
+          break;
+      //soba
+      case 17:
         this.router.navigate(['soba-billboard'], { relativeTo: this.route });
         break;
 

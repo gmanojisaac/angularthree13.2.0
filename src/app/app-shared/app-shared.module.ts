@@ -9,6 +9,7 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons/faGoogle';
 import { faWhatsappSquare } from '@fortawesome/free-brands-svg-icons/faWhatsappSquare';
 import { faSignOutAlt ,faInfoCircle ,faCalendarAlt,faHome, faPhone, faArrowAltCircleRight, faMotorcycle, faCoffee, faTruckPickup, faCarSide, faReceipt } from '@fortawesome/free-solid-svg-icons';
 import { faLaugh, faSquare } from '@fortawesome/free-regular-svg-icons';
+import { faLocationArrow } from '@fortawesome/free-solid-svg-icons/faLocationArrow';
 
 @NgModule({
   declarations: [],
@@ -23,7 +24,7 @@ import { faLaugh, faSquare } from '@fortawesome/free-regular-svg-icons';
 export class AppSharedModule { 
   constructor(private library: FaIconLibrary) {
     // tslint:disable-next-line: max-line-length
-    library.addIcons( faSignOutAlt, faInfoCircle, faCalendarAlt,faHome, faPhone, faArrowAltCircleRight, faMotorcycle, faGoogle, faSquare, faCoffee, faLaugh, faTruckPickup, faCarSide, faReceipt, faWhatsappSquare);
+    library.addIcons( faLocationArrow, faSignOutAlt, faInfoCircle, faCalendarAlt,faHome, faPhone, faArrowAltCircleRight, faMotorcycle, faGoogle, faSquare, faCoffee, faLaugh, faTruckPickup, faCarSide, faReceipt, faWhatsappSquare);
   }
 
 

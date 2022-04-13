@@ -1,38 +1,14 @@
-import { BoxProps, NgtPhysicsModule, SphereProps } from '@angular-three/cannon';
+import { BoxProps, SphereProps } from '@angular-three/cannon';
 import {
-    NgtPhysicBox,
-    NgtPhysicBoxModule,
-    NgtPhysicPlaneModule,
-    NgtPhysicSphereModule,
+    NgtPhysicBox
 } from '@angular-three/cannon/bodies';
 import {
-    NgtCoreModule,
+ 
     NgtEuler,
     NgtRender,
     NgtTriplet,
     NgtVector3,
-    NgtVectorPipeModule,
 } from '@angular-three/core';
-import { NgtInstancedBufferAttributeModule } from '@angular-three/core/attributes';
-import {
-    NgtBoxGeometryModule,
-    NgtPlaneGeometryModule,
-    NgtSphereGeometryModule,
-} from '@angular-three/core/geometries';
-import {
-    NgtHemisphereLightModule,
-    NgtPointLightModule,
-    NgtSpotLightModule,
-} from '@angular-three/core/lights';
-import {
-    NgtMeshLambertMaterialModule,
-    NgtMeshPhongMaterialModule,
-} from '@angular-three/core/materials';
-import {
-    NgtInstancedMeshModule,
-    NgtMeshModule,
-} from '@angular-three/core/meshes';
-import { NgtStatsModule } from '@angular-three/core/stats';
 import {
     ChangeDetectionStrategy,
     Component,
@@ -49,7 +25,7 @@ const niceColor = niceColors[Math.floor(Math.random() * niceColors.length)];
 @Component({
     selector: 'demo-kinematic-cube',
     template: `
-        <ngt-canvas [shadows]="true" [camera]="{ position: [0, -12, 16] }">
+        <ngt-canvas [shadows]="true" [camera]="{ position: [0, -12, 16] }" style="height:100vh; width: 100vw;">
             <ngt-stats></ngt-stats>
 
             <ngt-hemisphere-light [intensity]="0.35"></ngt-hemisphere-light>
@@ -116,7 +92,7 @@ export class KinematicCubeComponent {
     `,
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PlaneComponent {
+export class KPlaneComponent {
     @Input() color?: THREE.ColorRepresentation;
     @Input() position?: NgtVector3;
     @Input() rotation?: NgtEuler;
@@ -139,7 +115,7 @@ export class PlaneComponent {
     `,
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BoxComponent {
+export class KBoxComponent {
     boxSize: NgtTriplet = [4, 4, 4];
 
     getBoxProps = (): BoxProps => ({
@@ -178,7 +154,7 @@ export class BoxComponent {
     `,
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class InstancedSpheresComponent {
+export class KInstancedSpheresComponent {
     @Input() number = 100;
 
     colors!: Float32Array;
@@ -207,34 +183,3 @@ export class InstancedSpheresComponent {
         } as SphereProps;
     }
 }
-
-@NgModule({
-    declarations: [
-        KinematicCubeComponent,
-        PlaneComponent,
-        BoxComponent,
-        InstancedSpheresComponent,
-    ],
-    exports: [KinematicCubeComponent],
-    imports: [
-        NgtCoreModule,
-        NgtStatsModule,
-        NgtHemisphereLightModule,
-        NgtSpotLightModule,
-        NgtVectorPipeModule,
-        NgtPointLightModule,
-        NgtPhysicPlaneModule,
-        NgtPlaneGeometryModule,
-        NgtMeshPhongMaterialModule,
-        NgtPhysicBoxModule,
-        NgtBoxGeometryModule,
-        NgtMeshLambertMaterialModule,
-        NgtPhysicSphereModule,
-        NgtMeshModule,
-        NgtInstancedMeshModule,
-        NgtSphereGeometryModule,
-        NgtInstancedBufferAttributeModule,
-        NgtPhysicsModule,
-    ],
-})
-export class KinematicCubeComponentModule {}

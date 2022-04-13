@@ -1,29 +1,13 @@
-import { NgtColorPipeModule, NgtCoreModule } from '@angular-three/core';
-import { NgtGroupModule } from '@angular-three/core/group';
 import {
-    NgtAmbientLightModule,
-    NgtDirectionalLightModule,
-} from '@angular-three/core/lights';
-import { NgtMeshModule } from '@angular-three/core/meshes';
-import { NgtStatsModule } from '@angular-three/core/stats';
-import { NgtEffectComposerModule } from '@angular-three/postprocessing';
-import {
-    NgtBloomModule,
-    NgtNoiseModule,
-} from '@angular-three/postprocessing/effects';
-import { NgtSobaOrbitControlsModule } from '@angular-three/soba/controls';
-import {
-    NgtGLTFLoader,
-    NgtSobaLoaderModule,
+    NgtGLTFLoader
 } from '@angular-three/soba/loaders';
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import * as THREE from 'three';
 
 @Component({
     selector: 'demo-keen-bloom',
     template: `
-        <ngt-canvas
+        <ngt-canvas style="height: 80vh; width: 100vw;" 
             [camera]="{ position: [0, 0, 15], near: 5, far: 20 }"
             [scene]="{ background: 'black' | color }"
         >
@@ -83,24 +67,3 @@ export class KeenComponent {
         group.rotation.x = -Math.PI / 2;
     }
 }
-
-@NgModule({
-    declarations: [KeenBloomComponent, KeenComponent],
-    exports: [KeenBloomComponent],
-    imports: [
-        CommonModule,
-        NgtCoreModule,
-        NgtGroupModule,
-        NgtMeshModule,
-        NgtAmbientLightModule,
-        NgtDirectionalLightModule,
-        NgtEffectComposerModule,
-        NgtBloomModule,
-        NgtStatsModule,
-        NgtNoiseModule,
-        NgtSobaLoaderModule,
-        NgtColorPipeModule,
-        NgtSobaOrbitControlsModule,
-    ],
-})
-export class KeenComponentModule {}

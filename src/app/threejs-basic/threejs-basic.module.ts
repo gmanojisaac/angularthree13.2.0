@@ -28,7 +28,7 @@ import { NgtInstancedBufferAttributeModule } from '@angular-three/core/attribute
 import { NgtPhysicsModule } from '@angular-three/cannon';
 import { NgtPhysicBoxModule, NgtPhysicCompoundModule, NgtPhysicConvexPolyhedronModule, NgtPhysicCylinderModule, NgtPhysicPlaneModule, NgtPhysicSphereModule, NgtPhysicTrimeshModule } from '@angular-three/cannon/bodies';
 
-import { NgtSobaGradientTextureModule,NgtSobaTextModule, NgtSobaGizmoHelperModule } from '@angular-three/soba/abstractions';
+import { NgtSobaGradientTextureModule,NgtSobaTextModule, NgtSobaGizmoHelperModule  } from '@angular-three/soba/abstractions';
 
 import { NgtSobaOrbitControlsModule} from '@angular-three/soba/controls';
 import { NgtCannonDebugModule } from '@angular-three/cannon/debug';
@@ -62,17 +62,29 @@ import { CannonCompoundComponent,PlaneCompoundComponent,CompoundComponent } from
 import { CannonClumpComponent, ClumpComponent,PointerComponent} from './cannon-clump/cannon-clump.component';
 import { CannonSphereComponent,PlaneSphereComponent,ScalableBallComponent } from './cannon-sphere/cannon-sphere.component';
 
-//,MarkerComponent,EarthComponent 
+
 import { SobaBillboardComponent} from './soba-billboard/soba-billboard.component';
 
 
-import { EarthMarkerComponentModule } from './earth-marker/earth-marker.component';
-import { KeenComponentModule } from './keen-bloom/keen-bloom.component';
-import { KinematicCubeComponentModule } from './kinematic-cube/kinematic-cube.component';
+import { MarkerComponent,EarthComponent,EarthMarkerComponent } from './earth-marker/earth-marker.component';
+import { KeenBloomComponent, KeenComponent } from './keen-bloom/keen-bloom.component';
+import {         
+  KinematicCubeComponent,
+  KPlaneComponent,
+  KBoxComponent,
+  KInstancedSpheresComponent } from './kinematic-cube/kinematic-cube.component';
 import { SimpleCubeComponentModule } from './simple-cube/simple-cube.component';
-import { TransformControlsDemoComponentModule } from './transform-controls-demo/transform-controls-demo.component';
+import { TransformControlsDemoComponent } from './transform-controls-demo/transform-controls-demo.component';
 import { DemoCubeComponent, CubedemoComponent } from './demo-cube/demo-cube.component';
 
+
+import {
+    NgtBloomModule,
+    NgtNoiseModule,
+} from '@angular-three/postprocessing/effects';
+import {   
+    NgtSobaTransformControlsModule,
+} from '@angular-three/soba/controls';
 
 
 @NgModule({
@@ -95,11 +107,16 @@ import { DemoCubeComponent, CubedemoComponent } from './demo-cube/demo-cube.comp
     CannonCompoundComponent, PlaneCompoundComponent,CompoundComponent,
     CannonClumpComponent, ClumpComponent,PointerComponent,
     CannonSphereComponent ,PlaneSphereComponent,ScalableBallComponent, 
-//, MarkerComponent,EarthComponent
     SobaBillboardComponent, 
-    DemoCubeComponent,CubedemoComponent
+    DemoCubeComponent,CubedemoComponent,
+    KeenComponent,KeenBloomComponent,
+    MarkerComponent,EarthComponent,EarthMarkerComponent,
 
-    
+    KinematicCubeComponent,
+    KPlaneComponent,
+    KBoxComponent,
+    KInstancedSpheresComponent, 
+    TransformControlsDemoComponent
   ],
   imports: [
     CommonModule,
@@ -167,13 +184,14 @@ import { DemoCubeComponent, CubedemoComponent } from './demo-cube/demo-cube.comp
     NgtSobaCubicBezierLineModule,
     NgtSobaQuadraticBezierLineModule,
     SimpleCubeComponentModule,
-    TransformControlsDemoComponentModule,
-    KeenComponentModule,
-    KinematicCubeComponentModule,
-    //EarthMarkerComponentModule
+    
+
     NgtSobaHtmlModule,
     NgtPrimitiveModule,
-    NgtSobaStageModule
+    NgtSobaStageModule,
+    NgtBloomModule,
+    NgtNoiseModule,
+    NgtSobaTransformControlsModule
   ]
 })
 export class ThreejsBasicModule { }
