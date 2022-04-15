@@ -87,6 +87,9 @@ export class OptionsComponent implements OnInit {
       case 55:
         this.router.navigate(['cannon-sphere'], { relativeTo: this.route });
         break;
+        case 56:
+          this.router.navigate(['/3jssoba']);
+          break;
     }
 
   }

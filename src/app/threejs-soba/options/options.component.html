@@ -1,0 +1,64 @@
+<div fxLayout="column" style="background-color:  #FFFFB7; height:100vh;"  style="overflow-x: auto;">
+    <div fxFlex="grow"  fxLayoutAlign="center center" style="margin-top: 1em;">
+        <p>
+            <mat-chip-list class="mat-chip-list-stacked" aria-label="Fish selection">
+                <mat-chip color="primary" selected>ThreeJs App</mat-chip>
+            </mat-chip-list>
+        </p>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.gt-sm="center center" >
+        <div style="background-color: FFFFB7; margin:5em 2em;" fxLayoutAlign="center center"   >
+        
+            <mat-chip-list class="mat-chip-list-stacked">
+                <button mat-raised-button color="primary" fxFlexAlign="center" style="margin-bottom: 1em;"> Abstraction</button>
+                <mat-chip color="accent" selected (click)="change3D(1)">Billboard</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(2)">Gizmo</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(3)">Gradient</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(4)">Line</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(5)">Text</mat-chip>
+            </mat-chip-list>
+        </div>    
+        <div style="background-color: FFFFB7; margin:5em 2em;" fxLayoutAlign="center center">
+        
+            <mat-chip-list class="mat-chip-list-stacked">
+                <button mat-raised-button color="primary" fxFlexAlign="center" style="margin-bottom: 1em;" > Staging</button>
+                <mat-chip color="accent" selected (click)="change3D(6)">Shake</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(7)">Center</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(8)">Shadow</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(18)">Env</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(9)">Sky</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(10)">Spot</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(11)">Stage</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(12)">Stars</mat-chip>      
+            </mat-chip-list>
+        </div>
+
+        <div style="background-color: FFFFB7; margin:5em 2em;" fxLayoutAlign="center center">
+        
+            <mat-chip-list class="mat-chip-list-stacked">
+                <button mat-raised-button color="primary" fxFlexAlign="center" style="margin-bottom: 1em;">Others</button>
+                <mat-chip color="accent" selected (click)="change3D(13)">Othographic camera</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(14)">Transform Control</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(15)">Lock Control</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(16)">Detailed Performance</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(17)">HTML Misc</mat-chip>
+            </mat-chip-list>
+        </div>
+    </div>
+
+    <div>
+        <div style="padding-bottom: 1em;" fxFlex="5em">
+    
+        </div>
+    
+        <button mat-raised-button color="primary" fxFlex (click)="goback()">
+          Back
+        </button>
+        <div style="padding-bottom: 1em;" fxFlex="5em">
+    
+        </div>
+      </div>
+      <div style="padding-bottom: 10px;">
+    
+      </div>
+</div>

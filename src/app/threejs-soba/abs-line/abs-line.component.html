@@ -1,0 +1,60 @@
+
+<ngt-canvas
+  [shadows]="true"
+  [camera]="{position: [0,0,17], fov: 75}"
+  [scene]='{background: "black" | color}'
+  style="height:100vh; width: 100vw;"
+>
+  <ngt-stats></ngt-stats>
+
+  <ng-container *ngIf="true">
+    <ngt-ambient-light [intensity]="0.8"></ngt-ambient-light>
+    <ngt-point-light [intensity]="1" [position]="[0, 6, 0]"></ngt-point-light>
+  </ng-container>
+
+  <ngt-soba-orbit-controls
+    *ngIf="false"
+    [makeDefault]="false"
+  ></ngt-soba-orbit-controls>
+
+<ngt-soba-line [points]="points" [lineWidth]="lineWidth" [dashed]="dashed" [color]="color"></ngt-soba-line>
+<ngt-soba-orbit-controls (ready)="$event.zoomSpeed = 0.5"></ngt-soba-orbit-controls>
+
+  <!--ngt-soba-quadratic-bezier-line
+      [start]="start"
+      [end]="end"
+      [segments]="segments"
+      [lineWidth]="lineWidth"
+      [dashed]="dashed"
+      [color]="color"
+    ></ngt-soba-quadratic-bezier-line>
+    <ngt-soba-orbit-controls (ready)="$event.zoomSpeed = 0.5"></ngt-soba-orbit-controls-->
+
+      <!--ngt-soba-cubic-bezier-line
+      [start]="start"
+      [end]="end"
+      [midA]="midA"
+      [midB]="midB"
+      [segments]="segments"
+      [color]="color"
+      [lineWidth]="lineWidth"
+      [dashed]="dashed"
+    ></ngt-soba-cubic-bezier-line>
+    <ngt-soba-orbit-controls (ready)="$event.zoomSpeed = 0.5"></ngt-soba-orbit-controls-->
+
+      <!--ngt-soba-line
+      [points]="points"
+      [vertexColors]="vertexColors"
+      [lineWidth]="lineWidth"
+      [dashed]="dashed"
+      [color]="color"
+    ></ngt-soba-line>
+    <ngt-soba-orbit-controls (ready)="$event.zoomSpeed = 0.5"></ngt-soba-orbit-controls>
+    
+  <ngt-soba-orbit-controls
+    (ready)="$event.zoomSpeed = 0.5"
+  ></ngt-soba-orbit-controls-->
+
+
+</ngt-canvas>
+<ngt-soba-loader *ngIf="false"></ngt-soba-loader>
