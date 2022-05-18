@@ -36,10 +36,10 @@ export class StageStageComponent {
     position: [0, 0, 0],
 };
 shadows= true;
-intensity= 1;
-environment : NgtSobaEnvironment["preset"]= "sunset";
+intensity= .10;
+environment : NgtSobaEnvironment["preset"]= "forest";
 
-preset= presets.rembrant;
+preset= presets.portrait;
 
   constructor() { }
 

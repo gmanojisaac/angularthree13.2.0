@@ -100,6 +100,7 @@ import { StageEnvComponent } from './stage-env/stage-env.component';
 import { NgtAxesHelperModule } from '@angular-three/core/helpers';
 import { NgtSobaSkyModule } from '@angular-three/soba/staging';
 
+
 @NgModule({
   declarations: [
     ThreejsSobaComponent,

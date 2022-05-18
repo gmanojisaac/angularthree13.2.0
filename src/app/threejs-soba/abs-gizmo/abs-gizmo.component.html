@@ -1,7 +1,7 @@
 <ngt-canvas
   [shadows]="true"
   [camera]="getcamera()"
-  [scene]='{background: "black" | color}'
+  [scene]='{background: "red" | color}'
   style="height:100vh; width: 100vw;"
 >
   <ngt-stats></ngt-stats>
@@ -10,10 +10,12 @@
     <ngt-ambient-light [intensity]="0.8"></ngt-ambient-light>
     <ngt-point-light [intensity]="1" [position]="[0, 6, 0]"></ngt-point-light>
   </ng-container>
+
   <ngt-soba-orbit-controls
   *ngIf="true"
   [makeDefault]="true"
 ></ngt-soba-orbit-controls>
+
   <ngt-default-gizmo [mode]="mode" [alignment]="alignment" [margin]="margin"></ngt-default-gizmo>
 </ngt-canvas>
 <ngt-soba-loader *ngIf="false"></ngt-soba-loader>

@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularthree13.2.0": {
+    "angularthree": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -80,10 +80,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angularthree13.2.0:build:production"
+              "browserTarget": "angularthree:build:production"
             },
             "development": {
-              "browserTarget": "angularthree13.2.0:build:development"
+              "browserTarget": "angularthree:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -91,7 +91,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularthree13.2.0:build"
+            "browserTarget": "angularthree:build"
           }
         },
         "test": {
@@ -118,12 +118,13 @@
           "options": {
             "prerender": false,
             "ssr": false,
-            "browserTarget": "angularthree13.2.0:build:production",
+            "browserTarget": "angularthree:build:production",
             "firebaseProject": "angularthree-23829",
             "firebaseHostingSite": "angularthree-23829"
           }
         }
       }
     }
-  }
+  },
+  "defaultProject": "angularthree"
 }
