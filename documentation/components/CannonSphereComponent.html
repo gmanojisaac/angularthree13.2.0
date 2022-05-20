@@ -1,0 +1,395 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>angularthree13.2.0 documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">angularthree13.2.0 documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  CannonSphereComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/threejs-basic/cannon-sphere/cannon-sphere.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-cannon-sphere</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./cannon-sphere.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./cannon-sphere.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/threejs-basic/cannon-sphere/cannon-sphere.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  GetByIndex,
+  PlaneProps,
+  SphereProps,
+} from &#x27;@angular-three/cannon&#x27;;
+import {
+  NgtPhysicSphere
+} from &#x27;@angular-three/cannon/bodies&#x27;;
+import {
+  NgtEuler,
+  NgtTriplet,
+  NgtVector3,
+} from &#x27;@angular-three/core&#x27;;
+
+import {
+  ChangeDetectionStrategy,
+  Component,
+  NgModule,
+  ViewChild,
+} from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-cannon-sphere&#x27;,
+  templateUrl: &#x27;./cannon-sphere.component.html&#x27;,
+  styleUrls: [&#x27;./cannon-sphere.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class CannonSphereComponent  {
+
+  constructor() { }
+
+
+}
+
+@Component({
+  selector: &#x27;storybook-plane-sphere&#x27;,
+  template: &#x60;
+      &lt;ngt-mesh
+          ngtPhysicPlane
+          [getPhysicProps]&#x3D;&quot;getPlaneProps&quot;
+          [rotation]&#x3D;&quot;rotation&quot;
+          [receiveShadow]&#x3D;&quot;true&quot;
+      &gt;
+          &lt;ngt-plane-geometry [args]&#x3D;&quot;[20, 20]&quot;&gt;&lt;/ngt-plane-geometry&gt;
+          &lt;ngt-shadow-material
+              [parameters]&#x3D;&quot;{ color: &#x27;#171717&#x27; }&quot;
+          &gt;&lt;/ngt-shadow-material&gt;
+      &lt;/ngt-mesh&gt;
+  &#x60;,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class PlaneSphereComponent {
+  rotation &#x3D; [-Math.PI / 2, 0, 0] as NgtEuler;
+
+  getPlaneProps: GetByIndex&lt;PlaneProps&gt; &#x3D; () &#x3D;&gt; ({
+      type: &#x27;Static&#x27;,
+      rotation: this.rotation as NgtTriplet,
+  });
+}
+
+@Component({
+  selector: &#x27;storybook-scalable-ball&#x27;,
+  template: &#x60;
+      &lt;ngt-mesh
+          ngtPhysicSphere
+          [getPhysicProps]&#x3D;&quot;getBallProps&quot;
+          [castShadow]&#x3D;&quot;true&quot;
+          [receiveShadow]&#x3D;&quot;true&quot;
+          [position]&#x3D;&quot;position&quot;
+          (click)&#x3D;&quot;onClick()&quot;
+      &gt;
+          &lt;ngt-sphere-geometry [args]&#x3D;&quot;[1, 32, 32]&quot;&gt;&lt;/ngt-sphere-geometry&gt;
+          &lt;ngt-mesh-standard-material
+              [parameters]&#x3D;&quot;{
+                  color: &#x27;blue&#x27;,
+                  transparent: true,
+                  opacity: 0.5
+              }&quot;
+          &gt;&lt;/ngt-mesh-standard-material&gt;
+      &lt;/ngt-mesh&gt;
+  &#x60;,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class ScalableBallComponent {
+  isSleeping &#x3D; false;
+
+  position &#x3D; [0, 5, 0] as NgtVector3;
+
+  @ViewChild(NgtPhysicSphere, { static: true })
+  physicSphere!: NgtPhysicSphere;
+
+  getBallProps: GetByIndex&lt;SphereProps&gt; &#x3D; () &#x3D;&gt; ({
+      args: [1],
+      mass: 1,
+      position: this.position as NgtTriplet,
+  });
+
+  onClick() {
+      this.isSleeping
+          ? this.physicSphere.api.wakeUp()
+          : this.physicSphere.api.sleep();
+      this.isSleeping &#x3D; !this.isSleeping;
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ngt-canvas
+            [shadows]&#x3D;&quot;true&quot;
+            [camera]&#x3D;&quot;{ position: [-1, 2, 4] }&quot;
+            [scene]&#x3D;&quot;{ background: &#x27;#a6d1f6&#x27; | color }&quot;
+            style&#x3D;&quot;height: 80vh; width: 100vw;&quot;
+        &gt;
+            &lt;ngt-hemisphere-light&gt;&lt;/ngt-hemisphere-light&gt;
+            &lt;ngt-directional-light
+                [castShadow]&#x3D;&quot;true&quot;
+                [position]&#x3D;&quot;[5, 10, 5]&quot;
+            &gt;&lt;/ngt-directional-light&gt;
+
+            &lt;ngt-physics [allowSleep]&#x3D;&quot;true&quot;&gt;
+                &lt;ngt-cannon-debug [scale]&#x3D;&quot;1.1&quot;&gt;
+                    &lt;storybook-plane&gt;&lt;/storybook-plane&gt;
+                    &lt;storybook-scalable-ball&gt;&lt;/storybook-scalable-ball&gt;
+                &lt;/ngt-cannon-debug&gt;
+            &lt;/ngt-physics&gt;
+
+            &lt;ngt-soba-orbit-controls&gt;&lt;/ngt-soba-orbit-controls&gt;
+        &lt;/ngt-canvas&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./cannon-sphere.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ngt-canvas            [shadows]="true"            [camera]="{ position: [-1, 2, 4] }"            [scene]="{ background: \'#a6d1f6\' | color }"            style="height: 80vh; width: 100vw;"        >            <ngt-hemisphere-light></ngt-hemisphere-light>            <ngt-directional-light                [castShadow]="true"                [position]="[5, 10, 5]"            ></ngt-directional-light>            <ngt-physics [allowSleep]="true">                <ngt-cannon-debug [scale]="1.1">                    <storybook-plane></storybook-plane>                    <storybook-scalable-ball></storybook-scalable-ball>                </ngt-cannon-debug>            </ngt-physics>            <ngt-soba-orbit-controls></ngt-soba-orbit-controls>        </ngt-canvas></div>'
+    var COMPONENTS = [{'name': 'AbsBillboardComponent', 'selector': 'app-abs-billboard'},{'name': 'AbsGizmoComponent', 'selector': 'app-abs-gizmo'},{'name': 'AbsGradientComponent', 'selector': 'app-abs-gradient'},{'name': 'AbsLineComponent', 'selector': 'app-abs-line'},{'name': 'AbsTextComponent', 'selector': 'app-abs-text'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BeforeLoginComponent', 'selector': 'app-before-login'},{'name': 'BoxComponent', 'selector': 'app-box'},{'name': 'ButtonComponent', 'selector': 'storybook-button'},{'name': 'CameracontrolComponent', 'selector': 'app-cameracontrol'},{'name': 'CamOthroComponent', 'selector': 'app-cam-othro'},{'name': 'CannonClumpComponent', 'selector': 'app-cannon-clump'},{'name': 'CannonCompoundComponent', 'selector': 'app-cannon-compound'},{'name': 'CannonKinematicComponent', 'selector': 'app-cannon-kinematic'},{'name': 'CannonSingleComponent', 'selector': 'app-cannon-single'},{'name': 'CannonSphereComponent', 'selector': 'app-cannon-sphere'},{'name': 'CannonStartComponent', 'selector': 'app-cannon-start'},{'name': 'CardComponent', 'selector': 'wm-card'},{'name': 'ClumpComponent', 'selector': 'storybook-clump'},{'name': 'CompoundComponent', 'selector': 'ngt-compound'},{'name': 'ControlLockComponent', 'selector': 'app-control-lock'},{'name': 'ControlTransformComponent', 'selector': 'app-control-transform'},{'name': 'CubeCannonComponent', 'selector': 'app-cube-cannon'},{'name': 'CubeComponent', 'selector': 'app-cube'},{'name': 'CubeComponent', 'selector': 'demo-cube'},{'name': 'CubedemoComponent', 'selector': 'demo-cube'},{'name': 'CubelightComponent', 'selector': 'app-cubelight'},{'name': 'CubeSingleComponent', 'selector': 'storybook-cube'},{'name': 'CubespotlightComponent', 'selector': 'app-cubespotlight'},{'name': 'CubestateComponent', 'selector': 'app-cubestate'},{'name': 'DefaultCameraShakeScene', 'selector': 'ngt-default-camera-shake-scene'},{'name': 'DefaultCenter', 'selector': 'ngt-default-center'},{'name': 'DefaultGizmo', 'selector': 'ngt-default-gizmo'},{'name': 'DefaultSpotLight', 'selector': 'ngt-default-spot-light'},{'name': 'DemoCubeComponent', 'selector': 'app-demo-cube'},{'name': 'EarthComponent', 'selector': 'demo-earth'},{'name': 'EarthMarkerComponent', 'selector': 'demo-earth-marker'},{'name': 'FirstPersonControlsComponent', 'selector': 'first-person-controls'},{'name': 'FloorComponent', 'selector': 'app-floor'},{'name': 'HeaderComponent', 'selector': 'storybook-header'},{'name': 'InstancedSpheresComponent', 'selector': 'app-spheres'},{'name': 'KBoxComponent', 'selector': 'demo-box'},{'name': 'KeenBloomComponent', 'selector': 'demo-keen-bloom'},{'name': 'KeenComponent', 'selector': 'demo-keen'},{'name': 'KinematicCubeComponent', 'selector': 'demo-kinematic-cube'},{'name': 'KinematicsComponent', 'selector': 'app-kinematics'},{'name': 'KInstancedSpheresComponent', 'selector': 'demo-spheres'},{'name': 'KPlaneComponent', 'selector': 'demo-plane'},{'name': 'MarkerComponent', 'selector': 'demo-marker'},{'name': 'MarmiRxstateComponent', 'selector': 'app-marmi-rxstate'},{'name': 'MiscHtmlComponent', 'selector': 'app-misc-html'},{'name': 'OptionsComponent', 'selector': 'app-options'},{'name': 'OptionsComponent', 'selector': 'app-options'},{'name': 'PageComponent', 'selector': 'storybook-page'},{'name': 'PerfDetailedComponent', 'selector': 'app-perf-detailed'},{'name': 'PlaneComponent', 'selector': 'app-plane'},{'name': 'PlaneCompoundComponent', 'selector': 'ngt-plane'},{'name': 'PlaneSingleComponent', 'selector': 'storybook-plane'},{'name': 'PlaneSphereComponent', 'selector': 'storybook-plane-sphere'},{'name': 'PointerComponent', 'selector': 'storybook-pointer'},{'name': 'PresenterPatternSolution', 'selector': 'rxa-presenter-pattern-solution'},{'name': 'RecipePreviewComponent', 'selector': 'wm-recipe-preview'},{'name': 'RxstateExampleComponent', 'selector': 'app-rxstate-example'},{'name': 'RxstatePresenterComponent', 'selector': 'app-rxstate-presenter'},{'name': 'ScalableBallComponent', 'selector': 'storybook-scalable-ball'},{'name': 'SideEffectsSolution', 'selector': 'rxa-side-effects-solution'},{'name': 'SimpleCubeComponent', 'selector': 'demo-simple-cube'},{'name': 'SobaBillboardComponent', 'selector': 'app-soba-billboard'},{'name': 'SpincubeComponent', 'selector': 'app-spincube'},{'name': 'StageCenterComponent', 'selector': 'app-stage-center'},{'name': 'StageEnvComponent', 'selector': 'app-stage-env'},{'name': 'StageShadowComponent', 'selector': 'app-stage-shadow'},{'name': 'StageShakeComponent', 'selector': 'app-stage-shake'},{'name': 'StageSkyComponent', 'selector': 'app-stage-sky'},{'name': 'StageSpotComponent', 'selector': 'app-stage-spot'},{'name': 'StageStageComponent', 'selector': 'app-stage-stage'},{'name': 'StageStarsComponent', 'selector': 'app-stage-stars'},{'name': 'ThreejsBasicComponent', 'selector': 'app-threejs-basic'},{'name': 'ThreejsSobaComponent', 'selector': 'app-threejs-soba'},{'name': 'TransformControlsDemoComponent', 'selector': 'demo-transform-controls'},{'name': 'TwospinComponent', 'selector': 'app-twospin'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CannonSphereComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CannonSphereComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

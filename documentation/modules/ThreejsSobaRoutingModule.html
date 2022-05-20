@@ -1,0 +1,212 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>angularthree13.2.0 documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">angularthree13.2.0 documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content module">
+                   <div class="content-data">
+
+
+
+<ol class="breadcrumb">
+    <li>Modules</li>
+    <li >ThreejsSobaRoutingModule</li>
+</ol>
+
+
+<ul class="nav nav-tabs" role="tablist">
+    <li  class="active" >
+        <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+    <li >
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/threejs-soba/threejs-soba-routing.module.ts</code>
+        </p>
+
+
+
+
+
+        <div class="container-fluid module">
+            <div class="row">
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
+import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
+import { ThreejsSobaComponent } from &#x27;./threejs-soba.component&#x27;;
+
+import { OptionsComponent } from &#x27;./options/options.component&#x27;;
+
+import { AbsBillboardComponent } from &#x27;./abs-billboard/abs-billboard.component&#x27;;
+import { AbsGizmoComponent } from &#x27;./abs-gizmo/abs-gizmo.component&#x27;;
+import { AbsGradientComponent } from &#x27;./abs-gradient/abs-gradient.component&#x27;;
+import { AbsLineComponent } from &#x27;./abs-line/abs-line.component&#x27;;
+import { AbsTextComponent } from &#x27;./abs-text/abs-text.component&#x27;;
+import { StageShakeComponent } from &#x27;./stage-shake/stage-shake.component&#x27;;
+import { StageCenterComponent } from &#x27;./stage-center/stage-center.component&#x27;;
+import { StageShadowComponent } from &#x27;./stage-shadow/stage-shadow.component&#x27;;
+import { StageSkyComponent } from &#x27;./stage-sky/stage-sky.component&#x27;;
+import { StageSpotComponent } from &#x27;./stage-spot/stage-spot.component&#x27;;
+import { StageStageComponent } from &#x27;./stage-stage/stage-stage.component&#x27;;
+import { StageStarsComponent } from &#x27;./stage-stars/stage-stars.component&#x27;;
+import { CamOthroComponent } from &#x27;./cam-othro/cam-othro.component&#x27;;
+import { ControlTransformComponent } from &#x27;./control-transform/control-transform.component&#x27;;
+import { ControlLockComponent } from &#x27;./control-lock/control-lock.component&#x27;;
+import { PerfDetailedComponent } from &#x27;./perf-detailed/perf-detailed.component&#x27;;
+import { MiscHtmlComponent } from &#x27;./misc-html/misc-html.component&#x27;;
+import { StageEnvComponent } from &#x27;./stage-env/stage-env.component&#x27;;
+const routes: Routes &#x3D; [{   
+  path: &#x27;&#x27;,
+  component: ThreejsSobaComponent ,
+  children: [
+    {
+      path: &#x27;&#x27;,
+      children: [
+        { path: &#x27;&#x27;, component: OptionsComponent },
+        { path: &#x27;abs-billboard&#x27;, component: AbsBillboardComponent },
+        { path: &#x27;abs-gizmo&#x27;, component: AbsGizmoComponent },
+        { path: &#x27;abs-gradient&#x27;, component: AbsGradientComponent },
+        { path: &#x27;abs-line&#x27;, component: AbsLineComponent },
+        { path: &#x27;abs-text&#x27;, component: AbsTextComponent },
+        { path: &#x27;stage-shake&#x27;, component: StageShakeComponent },
+        { path: &#x27;stage-center&#x27;, component: StageCenterComponent },
+        { path: &#x27;stage-shadow&#x27;, component: StageShadowComponent },
+        { path: &#x27;stage-env&#x27;, component: StageEnvComponent },        
+        { path: &#x27;stage-sky&#x27;, component: StageSkyComponent },        
+        { path: &#x27;stage-spot&#x27;, component: StageSpotComponent },
+        { path: &#x27;stage-stage&#x27;, component: StageStageComponent },
+        { path: &#x27;stage-stars&#x27;, component: StageStarsComponent },   
+        { path: &#x27;cam-othro&#x27;, component: CamOthroComponent }, 
+        { path: &#x27;control-transform&#x27;, component: ControlTransformComponent },  
+        { path: &#x27;control-lock&#x27;, component: ControlLockComponent },
+        { path: &#x27;perf-detailed&#x27;, component: PerfDetailedComponent },
+        { path: &#x27;misc-html&#x27;, component: MiscHtmlComponent }        
+      ]
+    }]
+  
+}];
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class ThreejsSobaRoutingModule { }
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
+            var COMPODOC_CURRENT_PAGE_URL = 'ThreejsSobaRoutingModule.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

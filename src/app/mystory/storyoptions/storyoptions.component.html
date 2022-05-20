@@ -1,0 +1,65 @@
+<div fxLayout="column" style="background-color:  #FFFFB7; height:100vh;"  style="overflow-x: auto;">
+    <div fxFlex="grow"  fxLayoutAlign="center center" style="margin-top: 1em;">
+        <p>
+            <mat-chip-list class="mat-chip-list-stacked" aria-label="Fish selection">
+                <mat-chip color="primary" selected>Srinivasan Interactions</mat-chip>
+            </mat-chip-list>
+        </p>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.gt-sm="center center" >
+        <div style="background-color: FFFFB7; margin:5em 2em;" fxLayoutAlign="center center"   >
+        
+            <mat-chip-list class="mat-chip-list-stacked">
+                <button mat-raised-button color="primary" fxFlexAlign="center" style="margin-bottom: 1em;"> State Management</button>
+                <mat-chip color="accent" selected (click)="change3D(1)">NgxsStore</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(2)">NgrxStore</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(3)">Rx-Angular</mat-chip>
+
+            </mat-chip-list>
+        </div>    
+        <div style="background-color: FFFFB7; margin:5em 2em;" fxLayoutAlign="center center">
+        
+            <mat-chip-list class="mat-chip-list-stacked">
+                <button mat-raised-button color="primary" fxFlexAlign="center" style="margin-bottom: 1em;" > Angular Tools</button>
+                <mat-chip color="accent" selected (click)="change3D(4)">Angular Playground</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(5)">Storybook</mat-chip>
+            </mat-chip-list>
+        </div>
+
+        <div style="background-color: FFFFB7; margin:5em 2em;" fxLayoutAlign="center center">
+        
+            <mat-chip-list class="mat-chip-list-stacked">
+                <button mat-raised-button color="primary" fxFlexAlign="center" style="margin-bottom: 1em;">Concepts to understand</button>
+                <mat-chip color="accent" selected (click)="change3D(6)">Angularthree</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(7)">Threejs</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(8)">shadertoy</mat-chip>
+                <mat-chip color="accent" selected (click)="change3D(9)">Blender-gltf</mat-chip>
+            </mat-chip-list>
+        </div>
+
+        <div style="background-color: FFFFB7; margin:5em 2em;" fxLayoutAlign="center center">
+        
+            <mat-chip-list class="mat-chip-list-stacked">
+                <button mat-raised-button color="primary" fxFlexAlign="center" style="margin-bottom: 1em;">Delivery expected</button>
+                <mat-chip color="accent" selected (click)="change3D(50)">WebGPU</mat-chip>
+            </mat-chip-list>
+        </div>
+
+    </div>
+
+    <div>
+        <div style="padding-bottom: 1em;" fxFlex="5em">
+    
+        </div>
+    
+        <button mat-raised-button color="primary" fxFlex (click)="goback()">
+          Back
+        </button>
+        <div style="padding-bottom: 1em;" fxFlex="5em">
+    
+        </div>
+      </div>
+      <div style="padding-bottom: 10px;">
+    
+      </div>
+</div>

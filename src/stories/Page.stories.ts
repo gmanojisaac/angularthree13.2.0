@@ -21,7 +21,7 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<Page> = (args: Page) => ({
+const Template: Story<Page> = (args) => ({
   props: args,
 });
 

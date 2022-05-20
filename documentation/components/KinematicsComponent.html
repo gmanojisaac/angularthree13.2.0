@@ -1,0 +1,1140 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>angularthree13.2.0 documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">angularthree13.2.0 documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  KinematicsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/threejs-basic/kinematics/kinematics.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-kinematics</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./kinematics.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./kinematics.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ballRadius" >ballRadius</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#camera" >camera</a>
+                            </li>
+                            <li>
+                                <a href="#cubes" >cubes</a>
+                            </li>
+                            <li>
+                                <a href="#getBallProps" >getBallProps</a>
+                            </li>
+                            <li>
+                                <a href="#getCubeProps" >getCubeProps</a>
+                            </li>
+                            <li>
+                                <a href="#player" >player</a>
+                            </li>
+                            <li>
+                                <a href="#playerRadius" >playerRadius</a>
+                            </li>
+                            <li>
+                                <a href="#projectiles" >projectiles</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#created" >created</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getShootDirection" >getShootDirection</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#shoot" >shoot</a>
+                            </li>
+                            <li>
+                                <a href="#tick" >tick</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(cd: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>cd</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="created"></a>
+                    <span class="name">
+                        <span ><b>created</b></span>
+                        <a href="#created"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>created(event: <a href="../interfaces/State.html" target="_self">NgtCreatedState</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="../interfaces/State.html" target="_self" >NgtCreatedState</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getShootDirection"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getShootDirection</b></span>
+                        <a href="#getShootDirection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getShootDirection()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:74</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Vector3</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="shoot"></a>
+                    <span class="name">
+                        <span ><b>shoot</b></span>
+                        <a href="#shoot"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>shoot()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tick"></a>
+                    <span class="name">
+                        <span ><b>tick</b></span>
+                        <a href="#tick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>tick()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:98</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ballRadius"></a>
+                    <span class="name">
+                        <span ><b>ballRadius</b></span>
+                        <a href="#ballRadius"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0.1</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="camera"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>camera</b></span>
+                        <a href="#camera"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Camera</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cubes"></a>
+                    <span class="name">
+                        <span ><b>cubes</b></span>
+                        <a href="#cubes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Target.html" target="_self" >Array&lt;Target&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBallProps"></a>
+                    <span class="name">
+                        <span ><b>getBallProps</b></span>
+                        <a href="#getBallProps"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>GetByIndex&lt;SphereProps&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:67</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCubeProps"></a>
+                    <span class="name">
+                        <span ><b>getCubeProps</b></span>
+                        <a href="#getCubeProps"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>GetByIndex&lt;BoxProps&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:59</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="player"></a>
+                    <span class="name">
+                        <span ><b>player</b></span>
+                        <a href="#player"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>NgtPhysicSphere</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;player&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="playerRadius"></a>
+                    <span class="name">
+                        <span ><b>playerRadius</b></span>
+                        <a href="#playerRadius"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0.5</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="projectiles"></a>
+                    <span class="name">
+                        <span ><b>projectiles</b></span>
+                        <a href="#projectiles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Projectile.html" target="_self" >Array&lt;Projectile&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/threejs-basic/kinematics/kinematics.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component } from &quot;@angular/core&quot;;
+
+import { NgtCreatedState, NgtTriplet } from &quot;@angular-three/core&quot;;
+
+import { BoxProps, GetByIndex, SphereProps } from &quot;@angular-three/cannon&quot;;
+import { Camera, Ray, Vector3 } from &quot;three&quot;;
+import { ViewChild } from &quot;@angular/core&quot;;
+import { NgtPhysicSphere } from &quot;@angular-three/cannon/bodies&quot;;
+
+class Projectile {
+  constructor(public position: NgtTriplet, public ttl: number &#x3D; 30) { }
+}
+class Target {
+  constructor(public position: NgtTriplet, public color: string) { }
+}
+
+@Component({
+  selector: &#x27;app-kinematics&#x27;,
+  templateUrl: &#x27;./kinematics.component.html&#x27;,
+  styleUrls: [&#x27;./kinematics.component.scss&#x27;]
+})
+export class KinematicsComponent  implements AfterViewInit {
+  @ViewChild(&#x27;player&#x27;) player!: NgtPhysicSphere;
+
+  projectiles: Array&lt;Projectile&gt; &#x3D; [];
+  cubes: Array&lt;Target&gt; &#x3D; [];
+
+  playerRadius &#x3D; 0.5;
+  ballRadius &#x3D; 0.1;
+
+  private camera!: Camera;
+
+  constructor(private cd: ChangeDetectorRef) {
+    for (let i &#x3D; 0; i &lt; 30; i++) {
+      this.cubes.push(new Target([
+        -10 + Math.random() * 20,
+        Math.random() + 1,
+        -10 + Math.random() * 20
+      ], &#x27;#&#x27; + Math.floor(Math.random() * 16777215).toString(16).padEnd(6, &#x27;0&#x27;)));
+    }
+  }
+
+  ngAfterViewInit(): void {
+    // if setInterval is removed, will need to call detectChanges below
+    setInterval(() &#x3D;&gt; {
+      this.projectiles.forEach((item, index) &#x3D;&gt; {
+        item.ttl--;
+        if (item.ttl &lt;&#x3D; 0) {
+         this.projectiles.splice(index, 1)
+        }
+      })
+    }, 100);
+  }
+
+  created(event: NgtCreatedState) {
+    this.camera &#x3D; event.camera;
+  }
+  //event after canvas was created is used to copy camera object locally
+  getCubeProps: GetByIndex&lt;BoxProps&gt; &#x3D; (index: number) &#x3D;&gt; (
+    {
+      mass: 1,
+      material: { friction: 0, restitution: 0.3 },
+      args: [1, 1, 1],
+    }
+  )
+
+  getBallProps: GetByIndex&lt;SphereProps&gt; &#x3D; (index: number) &#x3D;&gt; (
+    {
+      mass: 2,
+      args: [this.ballRadius]
+    }
+  )
+
+  private getShootDirection(): Vector3 {
+    const vector &#x3D; new Vector3(0, 0, 1)
+    vector.unproject(this.camera)
+    const ray &#x3D; new Ray(this.camera.position, vector.sub(this.camera.position).normalize())
+    return ray.direction;
+  }
+
+
+  shoot() {
+    const shootDirection &#x3D; this.getShootDirection()
+
+    // position the ball to bounce off the player sphere
+    const position &#x3D; [
+      this.camera.position.x + shootDirection.x * (this.playerRadius * 1.01 + this.ballRadius),
+      this.camera.position.y + shootDirection.y * (this.playerRadius * 1.01 + this.ballRadius),
+      this.camera.position.z + shootDirection.z * (this.playerRadius * 1.01 + this.ballRadius),
+    ] as NgtTriplet;
+
+    this.projectiles.push(new Projectile(position));
+
+    // if setInterval is removed above, need to uncomment for ball to appear
+    //this.cd.detectChanges();
+  }
+//add projectiles after getting the shoot direction and position
+  tick() {
+    this.player.api.position.copy(this.camera.position);
+  }
+}
+//sphere position moves with camera
+
+
+import {  EventEmitter, Input, OnDestroy, Output } from &#x27;@angular/core&#x27;;
+import { NgtCanvasStore, NgtRender } from &#x27;@angular-three/core&#x27;;
+
+//
+// adapted from three.js games fps example https://github.com/mrdoob/three.js/blob/master/examples/games_fps.html
+//
+@Component({
+  selector: &#x27;first-person-controls&#x27;,
+  template: &#x27;&lt;ngt-group (ready)&#x3D;&quot;ready()&quot; (animateReady)&#x3D;&quot;animate($event.state)&quot;&gt;&lt;/ngt-group&gt;&#x27;
+})
+export class FirstPersonControlsComponent implements OnDestroy {
+  @Input() container: HTMLElement &#x3D; document.body;
+  @Input() viewerheight &#x3D; 1.5;
+  @Input() movespeed &#x3D; 1;
+  @Input() rotatefactor &#x3D; 2000;
+
+  @Output() shoot &#x3D; new EventEmitter();
+
+  private keyStates &#x3D; new Map&lt;string, boolean&gt;([]);
+  private camera!: Camera;
+
+  private cleanup!: () &#x3D;&gt; void;
+
+  constructor(private canvasStore: NgtCanvasStore) { }
+
+  ngOnDestroy(): void {
+    this.cleanup();
+  }
+
+  ready() {
+    const camera &#x3D; this.canvasStore.get((s) &#x3D;&gt; s.camera);
+    camera.rotation.order &#x3D; &#x27;YXZ&#x27;;
+    this.camera &#x3D; camera;
+
+    // movement
+    const keydown &#x3D; (event: KeyboardEvent) &#x3D;&gt; {
+      this.keyStates.set(event.code, true);
+    }
+    document.addEventListener(&#x27;keydown&#x27;, keydown);
+
+    const keyup &#x3D; (event: KeyboardEvent) &#x3D;&gt; {
+      this.keyStates.set(event.code, false);
+    }
+    document.addEventListener(&#x27;keyup&#x27;, keyup);
+
+    const mousedown &#x3D; () &#x3D;&gt; {
+      document.body.requestPointerLock();
+    }
+    this.container.addEventListener(&#x27;mousedown&#x27;, mousedown);
+
+    const mouseup &#x3D; () &#x3D;&gt; {
+      this.shoot.emit();
+    }
+    document.body.addEventListener(&#x27;mouseup&#x27;, mouseup);
+
+    // rotation
+    const mousemove &#x3D; (event: MouseEvent) &#x3D;&gt; {
+      if (document.pointerLockElement &#x3D;&#x3D;&#x3D; document.body) {
+        camera.rotation.y -&#x3D; event.movementX / this.rotatefactor;
+        camera.rotation.x -&#x3D; event.movementY / this.rotatefactor;
+      }
+    }
+    document.body.addEventListener(&#x27;mousemove&#x27;, mousemove);
+
+    this.cleanup &#x3D; () &#x3D;&gt; {
+      document.exitPointerLock();
+      document.removeEventListener(&#x27;keydown&#x27;, keydown);
+      document.removeEventListener(&#x27;keyup&#x27;, keyup);
+      this.container.removeEventListener(&#x27;mousedown&#x27;, mousedown);
+      document.body.removeEventListener(&#x27;mouseup&#x27;, mouseup);
+      document.body.removeEventListener(&#x27;mousemove&#x27;, mousemove);
+    }
+  }
+
+  private getForwardVector(): Vector3 {
+    const playerDirection &#x3D; new Vector3()
+
+    this.camera.getWorldDirection(playerDirection);
+    playerDirection.y &#x3D; 0;
+    playerDirection.normalize();
+
+    return playerDirection;
+  }
+
+  private getSideVector(): Vector3 {
+    const playerDirection &#x3D; new Vector3()
+
+    this.camera.getWorldDirection(playerDirection);
+    playerDirection.y &#x3D; 0;
+    playerDirection.normalize();
+    playerDirection.cross(this.camera.up);
+
+    return playerDirection;
+  }
+
+  private playerVelocity &#x3D; new Vector3();
+
+  private updateVelocity(deltaTime: number) {
+    const speedDelta &#x3D; deltaTime * 8;
+
+    if (this.keyStates.get(&#x27;KeyW&#x27;) || this.keyStates.get(&#x27;ArrowUp&#x27;)) {
+      this.playerVelocity.add(this.getForwardVector().multiplyScalar(speedDelta));
+    }
+
+    if (this.keyStates.get(&#x27;KeyS&#x27;) || this.keyStates.get(&#x27;ArrowDown&#x27;)) {
+      this.playerVelocity.add(this.getForwardVector().multiplyScalar(-speedDelta));
+    }
+
+    //if (this.keyStates.get(&#x27;KeyA&#x27; || this.keyStates.get(&#x27;ArrowLeft&#x27;))) {
+      //this.playerVelocity.add(this.getSideVector().multiplyScalar(-speedDelta));
+    //}
+
+    if (this.keyStates.get(&#x27;KeyD&#x27;) || this.keyStates.get(&#x27;ArrowRight&#x27;)) {
+      this.playerVelocity.add(this.getSideVector().multiplyScalar(speedDelta));
+    }
+  }
+
+  private moveCamera(deltaTime: number) {
+    // slow after mouse up
+    let damping &#x3D; Math.exp(-3 * deltaTime) - 1;
+
+    this.playerVelocity.addScaledVector(this.playerVelocity, damping);
+
+    const deltaPosition &#x3D; this.playerVelocity.clone().multiplyScalar(deltaTime);
+    if (this.camera) {
+      this.camera.position.add(deltaPosition);
+      this.camera.position.y &#x3D; this.viewerheight;
+    }
+  }
+
+  animate({ delta }: NgtRender) {
+    this.updateVelocity(delta * this.movespeed);  // check for input
+    this.moveCamera(delta); // move player
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div style&#x3D;&quot;height:100vh&quot;&gt;
+  &lt;ngt-canvas (created)&#x3D;&quot;created($event)&quot; [camera]&#x3D;&quot;{ position: [0, 0, 0], fov: 45 }&quot;
+              [shadows]&#x3D;&quot;true&quot;
+              [scene]&#x3D;&quot;{ background: &#x27;gray&#x27; | color }&quot;
+              [initialLog]&#x3D;&quot;true&quot;&gt;
+
+    &lt;ngt-physics&gt;
+      &lt;ngt-cannon-debug [disabled]&#x3D;&quot;true&quot; [scale]&#x3D;&quot;1.1&quot; color&#x3D;&quot;red&quot;&gt;
+
+        &lt;ngt-mesh ngtPhysicPlane [name]&#x3D;&quot;&#x27;plane&#x27;&quot;
+                  [receiveShadow]&#x3D;&quot;true&quot; [rotation]&#x3D;&quot;[-90 | radian, 0, 0]&quot;&gt;
+          &lt;ngt-plane-geometry [args]&#x3D;&quot;[100, 100]&quot;&gt;&lt;/ngt-plane-geometry&gt;
+          &lt;ngt-mesh-standard-material [parameters]&#x3D;&quot;{ color: &#x27;#777777&#x27; | color }&quot;&gt;&lt;/ngt-mesh-standard-material&gt;
+        &lt;/ngt-mesh&gt;
+
+        &lt;ngt-mesh #player&#x3D;&quot;ngtPhysicSphere&quot; ngtPhysicSphere (animateReady)&#x3D;&quot;tick()&quot;&gt;
+          &lt;ngt-sphere-geometry&gt;&lt;/ngt-sphere-geometry&gt;
+          &lt;ngt-mesh-standard-material&gt;&lt;/ngt-mesh-standard-material&gt;
+
+          &lt;!--have the light above the players head and follow the player--&gt;
+          &lt;ngt-point-light [args]&#x3D;&quot;[&#x27;white&#x27;, 2, 100]&quot; [position]&#x3D;&quot;[0, 2, 0]&quot; [castShadow]&#x3D;&quot;true&quot;&gt;
+          &lt;/ngt-point-light&gt;
+        &lt;/ngt-mesh&gt;
+
+        &lt;ngt-mesh *ngFor&#x3D;&quot;let item of cubes&quot; ngtPhysicBox [getPhysicProps]&#x3D;&quot;getCubeProps&quot;
+                  [position]&#x3D;&quot;item.position&quot; [castShadow]&#x3D;&quot;true&quot;&gt;
+          &lt;ngt-box-geometry&gt;&lt;/ngt-box-geometry&gt;
+          &lt;ngt-mesh-standard-material [parameters]&#x3D;&quot;{ color: item.color | color }&quot;&gt;&lt;/ngt-mesh-standard-material&gt;
+        &lt;/ngt-mesh&gt;
+
+        &lt;ngt-mesh *ngFor&#x3D;&quot;let item of projectiles&quot; ngtPhysicSphere [getPhysicProps]&#x3D;&quot;getBallProps&quot;
+                  [position]&#x3D;&quot;item.position&quot; [castShadow]&#x3D;&quot;true&quot;&gt;
+          &lt;ngt-sphere-geometry [args]&#x3D;&quot;[ballRadius]&quot;&gt;&lt;/ngt-sphere-geometry&gt;
+          &lt;ngt-mesh-standard-material [parameters]&#x3D;&quot;{ color: &#x27;yellow&#x27; | color }&quot;&gt;&lt;/ngt-mesh-standard-material&gt;
+        &lt;/ngt-mesh&gt;
+
+      &lt;/ngt-cannon-debug&gt;
+    &lt;/ngt-physics&gt;
+
+    &lt;first-person-controls [movespeed]&#x3D;&quot;2&quot; [viewerheight]&#x3D;&quot;1&quot; (shoot)&#x3D;&quot;shoot()&quot;&gt;&lt;/first-person-controls&gt;
+    &lt;ngt-stats&gt;&lt;/ngt-stats&gt;
+  &lt;/ngt-canvas&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./kinematics.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div style="height:100vh">  <ngt-canvas (created)="created($event)" [camera]="{ position: [0, 0, 0], fov: 45 }"              [shadows]="true"              [scene]="{ background: \'gray\' | color }"              [initialLog]="true">    <ngt-physics>      <ngt-cannon-debug [disabled]="true" [scale]="1.1" color="red">        <ngt-mesh ngtPhysicPlane [name]="\'plane\'"                  [receiveShadow]="true" [rotation]="[-90 | radian, 0, 0]">          <ngt-plane-geometry [args]="[100, 100]"></ngt-plane-geometry>          <ngt-mesh-standard-material [parameters]="{ color: \'#777777\' | color }"></ngt-mesh-standard-material>        </ngt-mesh>        <ngt-mesh #player="ngtPhysicSphere" ngtPhysicSphere (animateReady)="tick()">          <ngt-sphere-geometry></ngt-sphere-geometry>          <ngt-mesh-standard-material></ngt-mesh-standard-material>          <!--have the light above the players head and follow the player-->          <ngt-point-light [args]="[\'white\', 2, 100]" [position]="[0, 2, 0]" [castShadow]="true">          </ngt-point-light>        </ngt-mesh>        <ngt-mesh *ngFor="let item of cubes" ngtPhysicBox [getPhysicProps]="getCubeProps"                  [position]="item.position" [castShadow]="true">          <ngt-box-geometry></ngt-box-geometry>          <ngt-mesh-standard-material [parameters]="{ color: item.color | color }"></ngt-mesh-standard-material>        </ngt-mesh>        <ngt-mesh *ngFor="let item of projectiles" ngtPhysicSphere [getPhysicProps]="getBallProps"                  [position]="item.position" [castShadow]="true">          <ngt-sphere-geometry [args]="[ballRadius]"></ngt-sphere-geometry>          <ngt-mesh-standard-material [parameters]="{ color: \'yellow\' | color }"></ngt-mesh-standard-material>        </ngt-mesh>      </ngt-cannon-debug>    </ngt-physics>    <first-person-controls [movespeed]="2" [viewerheight]="1" (shoot)="shoot()"></first-person-controls>    <ngt-stats></ngt-stats>  </ngt-canvas></div></div>'
+    var COMPONENTS = [{'name': 'AbsBillboardComponent', 'selector': 'app-abs-billboard'},{'name': 'AbsGizmoComponent', 'selector': 'app-abs-gizmo'},{'name': 'AbsGradientComponent', 'selector': 'app-abs-gradient'},{'name': 'AbsLineComponent', 'selector': 'app-abs-line'},{'name': 'AbsTextComponent', 'selector': 'app-abs-text'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BeforeLoginComponent', 'selector': 'app-before-login'},{'name': 'BoxComponent', 'selector': 'app-box'},{'name': 'ButtonComponent', 'selector': 'storybook-button'},{'name': 'CameracontrolComponent', 'selector': 'app-cameracontrol'},{'name': 'CamOthroComponent', 'selector': 'app-cam-othro'},{'name': 'CannonClumpComponent', 'selector': 'app-cannon-clump'},{'name': 'CannonCompoundComponent', 'selector': 'app-cannon-compound'},{'name': 'CannonKinematicComponent', 'selector': 'app-cannon-kinematic'},{'name': 'CannonSingleComponent', 'selector': 'app-cannon-single'},{'name': 'CannonSphereComponent', 'selector': 'app-cannon-sphere'},{'name': 'CannonStartComponent', 'selector': 'app-cannon-start'},{'name': 'CardComponent', 'selector': 'wm-card'},{'name': 'ClumpComponent', 'selector': 'storybook-clump'},{'name': 'CompoundComponent', 'selector': 'ngt-compound'},{'name': 'ControlLockComponent', 'selector': 'app-control-lock'},{'name': 'ControlTransformComponent', 'selector': 'app-control-transform'},{'name': 'CubeCannonComponent', 'selector': 'app-cube-cannon'},{'name': 'CubeComponent', 'selector': 'app-cube'},{'name': 'CubeComponent', 'selector': 'demo-cube'},{'name': 'CubedemoComponent', 'selector': 'demo-cube'},{'name': 'CubelightComponent', 'selector': 'app-cubelight'},{'name': 'CubeSingleComponent', 'selector': 'storybook-cube'},{'name': 'CubespotlightComponent', 'selector': 'app-cubespotlight'},{'name': 'CubestateComponent', 'selector': 'app-cubestate'},{'name': 'DefaultCameraShakeScene', 'selector': 'ngt-default-camera-shake-scene'},{'name': 'DefaultCenter', 'selector': 'ngt-default-center'},{'name': 'DefaultGizmo', 'selector': 'ngt-default-gizmo'},{'name': 'DefaultSpotLight', 'selector': 'ngt-default-spot-light'},{'name': 'DemoCubeComponent', 'selector': 'app-demo-cube'},{'name': 'EarthComponent', 'selector': 'demo-earth'},{'name': 'EarthMarkerComponent', 'selector': 'demo-earth-marker'},{'name': 'FirstPersonControlsComponent', 'selector': 'first-person-controls'},{'name': 'FloorComponent', 'selector': 'app-floor'},{'name': 'HeaderComponent', 'selector': 'storybook-header'},{'name': 'InstancedSpheresComponent', 'selector': 'app-spheres'},{'name': 'KBoxComponent', 'selector': 'demo-box'},{'name': 'KeenBloomComponent', 'selector': 'demo-keen-bloom'},{'name': 'KeenComponent', 'selector': 'demo-keen'},{'name': 'KinematicCubeComponent', 'selector': 'demo-kinematic-cube'},{'name': 'KinematicsComponent', 'selector': 'app-kinematics'},{'name': 'KInstancedSpheresComponent', 'selector': 'demo-spheres'},{'name': 'KPlaneComponent', 'selector': 'demo-plane'},{'name': 'MarkerComponent', 'selector': 'demo-marker'},{'name': 'MarmiRxstateComponent', 'selector': 'app-marmi-rxstate'},{'name': 'MiscHtmlComponent', 'selector': 'app-misc-html'},{'name': 'OptionsComponent', 'selector': 'app-options'},{'name': 'OptionsComponent', 'selector': 'app-options'},{'name': 'PageComponent', 'selector': 'storybook-page'},{'name': 'PerfDetailedComponent', 'selector': 'app-perf-detailed'},{'name': 'PlaneComponent', 'selector': 'app-plane'},{'name': 'PlaneCompoundComponent', 'selector': 'ngt-plane'},{'name': 'PlaneSingleComponent', 'selector': 'storybook-plane'},{'name': 'PlaneSphereComponent', 'selector': 'storybook-plane-sphere'},{'name': 'PointerComponent', 'selector': 'storybook-pointer'},{'name': 'PresenterPatternSolution', 'selector': 'rxa-presenter-pattern-solution'},{'name': 'RecipePreviewComponent', 'selector': 'wm-recipe-preview'},{'name': 'RxstateExampleComponent', 'selector': 'app-rxstate-example'},{'name': 'RxstatePresenterComponent', 'selector': 'app-rxstate-presenter'},{'name': 'ScalableBallComponent', 'selector': 'storybook-scalable-ball'},{'name': 'SideEffectsSolution', 'selector': 'rxa-side-effects-solution'},{'name': 'SimpleCubeComponent', 'selector': 'demo-simple-cube'},{'name': 'SobaBillboardComponent', 'selector': 'app-soba-billboard'},{'name': 'SpincubeComponent', 'selector': 'app-spincube'},{'name': 'StageCenterComponent', 'selector': 'app-stage-center'},{'name': 'StageEnvComponent', 'selector': 'app-stage-env'},{'name': 'StageShadowComponent', 'selector': 'app-stage-shadow'},{'name': 'StageShakeComponent', 'selector': 'app-stage-shake'},{'name': 'StageSkyComponent', 'selector': 'app-stage-sky'},{'name': 'StageSpotComponent', 'selector': 'app-stage-spot'},{'name': 'StageStageComponent', 'selector': 'app-stage-stage'},{'name': 'StageStarsComponent', 'selector': 'app-stage-stars'},{'name': 'ThreejsBasicComponent', 'selector': 'app-threejs-basic'},{'name': 'ThreejsSobaComponent', 'selector': 'app-threejs-soba'},{'name': 'TransformControlsDemoComponent', 'selector': 'demo-transform-controls'},{'name': 'TwospinComponent', 'selector': 'app-twospin'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'KinematicsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'KinematicsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

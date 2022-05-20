@@ -781,6 +781,60 @@
     "interceptors": [],
     "classes": [
         {
+            "name": "MockLoadDataService",
+            "id": "class-MockLoadDataService-73ecd65e59b5bbd0dc29f45b8fc74a5c4d208ed424c8f6d2341d313bde76680d1bf3d76877ecf0334128eefa3f3e486e65203a3a3851e790fdc6e915b53b437d",
+            "file": "src/app/threejs-basic/cube/cube.component.sandbox.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import { sandboxOf } from 'angular-playground';\nimport { CubeComponent } from './cube.component';\nimport { of } from 'rxjs';\nimport { ActivatedRoute, Router } from '@angular/router';\n\nclass MockLoadDataService {\n  navigate() {\n      return of({firstName: 'John', lastName: 'Smith'});\n  }\n}\n\nclass MockRouterDataService {\n  navigate() {\n      return of({firstName: 'John', lastName: 'Smith'});\n  }\n}\nexport default sandboxOf(CubeComponent, {\n  providers: [{provide: ActivatedRoute, useClass: MockLoadDataService},\n    {provide: Router, useClass: MockRouterDataService}\n    ]\n})\n  .add('default', {\n    template: `<app-cube></app-cube>`\n  });\n",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "navigate",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 7,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "MockRouterDataService",
+            "id": "class-MockRouterDataService-73ecd65e59b5bbd0dc29f45b8fc74a5c4d208ed424c8f6d2341d313bde76680d1bf3d76877ecf0334128eefa3f3e486e65203a3a3851e790fdc6e915b53b437d",
+            "file": "src/app/threejs-basic/cube/cube.component.sandbox.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import { sandboxOf } from 'angular-playground';\nimport { CubeComponent } from './cube.component';\nimport { of } from 'rxjs';\nimport { ActivatedRoute, Router } from '@angular/router';\n\nclass MockLoadDataService {\n  navigate() {\n      return of({firstName: 'John', lastName: 'Smith'});\n  }\n}\n\nclass MockRouterDataService {\n  navigate() {\n      return of({firstName: 'John', lastName: 'Smith'});\n  }\n}\nexport default sandboxOf(CubeComponent, {\n  providers: [{provide: ActivatedRoute, useClass: MockLoadDataService},\n    {provide: Router, useClass: MockRouterDataService}\n    ]\n})\n  .add('default', {\n    template: `<app-cube></app-cube>`\n  });\n",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "navigate",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
             "name": "Projectile",
             "id": "class-Projectile-ca74499af1728f6220f5b54237788f557270a8fcd7a94987d40577d33ea3c05d9e5b1191f63415ab40256119fb3bccc2c6b31993239aaafee0c154dd905e34dd",
             "file": "src/app/threejs-basic/kinematics/kinematics.component.ts",
@@ -859,6 +913,61 @@
                 }
             ],
             "methods": [],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "SandboxesDefined",
+            "id": "class-SandboxesDefined-c5a70de18e4851ae347d83933f2725f3e681ae5ff0cc4277078e118111df4b5af20d4cff2ee8ba91326f08b324e1825331be8d716bdeefa04a688c4c971e94da",
+            "file": ".angular-playground/sandboxes.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "export class SandboxesDefined {\n  getSandbox(path: string): any {\n    /*GET_SANDBOX*/\n switch(path) {\ncase './app/mystory/marmicode/marmicode.component.sandbox':\n  return import( /* webpackMode: \"lazy\" */ 'C:/Users/hp/OneDrive/Desktop/Manoj/2022/Mar/angularthree13.2.0/src/app/mystory/marmicode/marmicode.component.sandbox').then(function(_){ return _.default.serialize('./app/mystory/marmicode/marmicode.component.sandbox'); });\ncase './app/threejs-basic/cube/cube.component.sandbox':\n  return import( /* webpackMode: \"lazy\" */ 'C:/Users/hp/OneDrive/Desktop/Manoj/2022/Mar/angularthree13.2.0/src/app/threejs-basic/cube/cube.component.sandbox').then(function(_){ return _.default.serialize('./app/threejs-basic/cube/cube.component.sandbox'); });\n}\n \n/*END_GET_SANDBOX*/\n  }\n  getSandboxMenuItems(): any {\n    /*GET_SANDBOX_MENU_ITEMS*/\n return [{\"key\":\"./app/mystory/marmicode/marmicode.component.sandbox\",\"srcPath\":\"C:\\\\Users\\\\hp\\\\OneDrive\\\\Desktop\\\\Manoj\\\\2022\\\\Mar\\\\angularthree13.2.0\\\\src\",\"searchKey\":\"MarmicodeComponent\",\"name\":\"MarmicodeComponent\",\"label\":\"\",\"scenarioMenuItems\":[{\"key\":1,\"description\":\"default\"}]},{\"key\":\"./app/threejs-basic/cube/cube.component.sandbox\",\"srcPath\":\"C:\\\\Users\\\\hp\\\\OneDrive\\\\Desktop\\\\Manoj\\\\2022\\\\Mar\\\\angularthree13.2.0\\\\src\",\"searchKey\":\"CubeComponent\",\"name\":\"CubeComponent\",\"label\":\"\",\"scenarioMenuItems\":[{\"key\":1,\"description\":\"default\"}]}]; \n/*END_GET_SANDBOX_MENU_ITEMS*/\n  }\n}\n",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "getSandbox",
+                    "args": [
+                        {
+                            "name": "path",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 4,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "path",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getSandboxMenuItems",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "indexSignatures": [],
             "inputsClass": [],
             "outputsClass": [],
@@ -1818,7 +1927,7 @@
         },
         {
             "name": "BeforeLoginComponent",
-            "id": "component-BeforeLoginComponent-237ec8a79ba10a55781e116f6283fff626ce499c30ca5273cd1b8fe9fe17b7b8ac47b7e48571048d2ec84a0e0dda16c40856278e85207be22131d5689e10ae8a",
+            "id": "component-BeforeLoginComponent-a4411bab2eb7836d65171db80a74527f688e7dcaaff4be15659b8db8ce62d367f57a7f56474b1ca2c2e0906be826b6a1b985ef830695c96270b21a456e5b8dc4",
             "file": "src/app/before-login/before-login.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1903,7 +2012,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 69,
+                    "line": 72,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -1913,7 +2022,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 67,
+                    "line": 70,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1925,7 +2034,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit,OnDestroy } from '@angular/core';\nimport { Observable,Subject, Subscription } from 'rxjs';\nimport {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';\nimport {takeUntil} from 'rxjs/operators';\nimport { Router, ActivatedRoute } from '@angular/router';\n\n@Component({\n  selector: 'app-before-login',\n  templateUrl: './before-login.component.html',\n  styleUrls: ['./before-login.component.scss']\n})\nexport class BeforeLoginComponent implements OnInit,OnDestroy {\n  destroyed = new Subject<void>();\n  displayNameMap = new Map([\n    [Breakpoints.XSmall, 'XSmall'],\n    [Breakpoints.Small, 'Small'],\n    [Breakpoints.Medium, 'Medium'],\n    [Breakpoints.Large, 'Large'],\n    [Breakpoints.XLarge, 'XLarge'],\n  ]);\n  flexwidth=\"100vw\";\n\n  constructor(breakpointObserver: BreakpointObserver,private route: ActivatedRoute, private router: Router) {\n\n    breakpointObserver.observe([\n      Breakpoints.XSmall,\n      Breakpoints.Small,\n      Breakpoints.Medium,\n      Breakpoints.Large,\n      Breakpoints.XLarge,\n    ]).pipe(takeUntil(this.destroyed)).subscribe(result => {\n        for (const query of Object.keys(result.breakpoints)) {\n          if (result.breakpoints[query]) {\n            console.log(this.displayNameMap.get(query));\n            switch(this.displayNameMap.get(query)){\n              case 'XSmall':\n                 this.flexwidth=\"100vw\";\n                break;\n                default:\n                  this.flexwidth=\"100vw\";\n                  break;\n \n            };\n          }\n        }\n    });\n\n\n   }\n   change3D(selected3D: number) {\n    switch (selected3D) {\n      case 1:\n        this.router.navigate(['basicthree']);\n        break;\n      case 2:\n        this.router.navigate(['items'], { relativeTo: this.route });\n        break;\n      case 3:\n        this.router.navigate(['items'], { relativeTo: this.route });\n        break;\n      case 4:\n        this.router.navigate(['items'], { relativeTo: this.route });\n        break;\n    }\n\n  }\n  ngOnInit(): void {\n  }\n  ngOnDestroy() {\n    this.destroyed.next();\n    this.destroyed.complete();\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnInit, OnDestroy } from '@angular/core';\nimport { Observable, Subject, Subscription } from 'rxjs';\nimport { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';\nimport { takeUntil } from 'rxjs/operators';\nimport { Router, ActivatedRoute } from '@angular/router';\n\n@Component({\n  selector: 'app-before-login',\n  templateUrl: './before-login.component.html',\n  styleUrls: ['./before-login.component.scss']\n})\nexport class BeforeLoginComponent implements OnInit, OnDestroy {\n  destroyed = new Subject<void>();\n  displayNameMap = new Map([\n    [Breakpoints.XSmall, 'XSmall'],\n    [Breakpoints.Small, 'Small'],\n    [Breakpoints.Medium, 'Medium'],\n    [Breakpoints.Large, 'Large'],\n    [Breakpoints.XLarge, 'XLarge'],\n  ]);\n  flexwidth = \"100vw\";\n\n  constructor(breakpointObserver: BreakpointObserver, private route: ActivatedRoute, private router: Router) {\n\n    breakpointObserver.observe([\n      Breakpoints.XSmall,\n      Breakpoints.Small,\n      Breakpoints.Medium,\n      Breakpoints.Large,\n      Breakpoints.XLarge,\n    ]).pipe(takeUntil(this.destroyed)).subscribe(result => {\n      for (const query of Object.keys(result.breakpoints)) {\n        if (result.breakpoints[query]) {\n          console.log(this.displayNameMap.get(query));\n          switch (this.displayNameMap.get(query)) {\n            case 'XSmall':\n              this.flexwidth = \"100vw\";\n              break;\n            default:\n              this.flexwidth = \"100vw\";\n              break;\n\n          };\n        }\n      }\n    });\n\n\n  }\n  change3D(selected3D: number) {\n    switch (selected3D) {\n      case 1:\n        this.router.navigate(['basicthree']);\n        break;\n      case 2:\n        this.router.navigate(['items'], { relativeTo: this.route });\n        break;\n      case 3:\n        this.router.navigate(['items'], { relativeTo: this.route });\n        break;\n      case 4:\n        this.router.navigate(['items'], { relativeTo: this.route });\n        break;\n      case 5:\n        this.router.navigate(['stories']);\n        break;\n    }\n\n  }\n  ngOnInit(): void {\n  }\n  ngOnDestroy() {\n    this.destroyed.next();\n    this.destroyed.complete();\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1994,7 +2103,7 @@
                 "OnInit",
                 "OnDestroy"
             ],
-            "templateData": "<div fxLayout=\"column\" style=\"background-color:  #FFFFB7; height:100vh;\">\n     <div fxFlex=\"grow\" style=\"overflow-y: auto;\" fxLayoutAlign=\"center center\">\n         <p>\n             <mat-chip-list class=\"mat-chip-list-stacked\" aria-label=\"Fish selection\">\n                 <mat-chip color=\"primary\" selected>App Collections</mat-chip>\n             </mat-chip-list>\n         </p>\n     </div>\n     <div style=\"background-color: FFFFB7;  margin:10em 0em; \" fxLayoutAlign=\"center center\">\n         <mat-chip-list class=\"mat-chip-list-stacked\" aria-label=\"Fish selection\">\n             <mat-chip color=\"accent\" selected (click)=\"change3D(1)\">Introduction3js</mat-chip>\n             <mat-chip color=\"accent\" selected (click)=\"change3D(2)\">BirthdayApp</mat-chip>\n             <mat-chip color=\"accent\" selected (click)=\"change3D(3)\">ConsentApp</mat-chip>\n             <mat-chip color=\"accent\" selected (click)=\"change3D(4)\">ImmersiveApp</mat-chip>\n         </mat-chip-list>\n     </div>\n </div>"
+            "templateData": "<div fxLayout=\"column\" style=\"background-color:  #FFFFB7; height:100vh;\">\n     <div fxFlex=\"grow\" style=\"overflow-y: auto;\" fxLayoutAlign=\"center center\">\n         <p>\n             <mat-chip-list class=\"mat-chip-list-stacked\" aria-label=\"Fish selection\">\n                 <mat-chip color=\"primary\" selected>App Collections</mat-chip>\n             </mat-chip-list>\n         </p>\n     </div>\n     <div style=\"background-color: FFFFB7;  margin:10em 0em; \" fxLayoutAlign=\"center center\">\n         <mat-chip-list class=\"mat-chip-list-stacked\" aria-label=\"Fish selection\">\n             <!--mat-chip color=\"accent\" selected (click)=\"change3D(1)\">Introduction3js</mat-chip>\n             <mat-chip color=\"accent\" selected (click)=\"change3D(2)\">BirthdayApp</mat-chip>\n             <mat-chip color=\"accent\" selected (click)=\"change3D(3)\">ConsentApp</mat-chip>\n             <mat-chip color=\"accent\" selected (click)=\"change3D(4)\">ImmersiveApp</mat-chip-->\n                <mat-chip color=\"accent\" selected (click)=\"change3D(5)\">Stories</mat-chip>\n         </mat-chip-list>\n     </div>\n </div>"
         },
         {
             "name": "BoxComponent",
@@ -6228,6 +6337,68 @@
             }
         },
         {
+            "name": "MarmicodeComponent",
+            "id": "component-MarmicodeComponent-34c8ffd5779cab750b909f4ce83bd62b6acab58b2c43f4a7372b85829b30119a6abe54b8d595463e7e5831123c6f5130fe65a5aaa7db367e112678542d67e308",
+            "file": "src/app/mystory/marmicode/marmicode.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-marmicode",
+            "styleUrls": [
+                "./marmicode.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./marmicode.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-marmicode',\n  templateUrl: './marmicode.component.html',\n  styleUrls: ['./marmicode.component.scss']\n})\nexport class MarmicodeComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./marmicode.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>marmicode works!</p>\n"
+        },
+        {
             "name": "MarmiRxstateComponent",
             "id": "component-MarmiRxstateComponent-672e9ebd4f7f37a6c4ebc07274697505264ce86473a906a77657dd527ecf44052774d6ab9621e9c63703bbe9895d14d6c0b6ce603356e61f7049cdfc7987e434",
             "file": "src/app/threejs-basic/marmi-rxstate/marmi-rxstate.component.ts",
@@ -6583,6 +6754,192 @@
                 "line": 24
             },
             "templateData": "<ngt-canvas\r\n  [shadows]=\"true\"\r\n  [camera]=\"{position: cameraPosition, fov: cameraFov}\"\r\n  [scene]='{background: \"black\" | color}'\r\n  style=\"height:100vh; width: 100vw;\"\r\n>\r\n  <ngt-stats></ngt-stats>\r\n\r\n  <ng-container *ngIf=\"true\">\r\n    <ngt-ambient-light [intensity]=\"0.8\"></ngt-ambient-light>\r\n    <ngt-point-light [intensity]=\"1\" [position]=\"[0, 6, 0]\"></ngt-point-light>\r\n  </ng-container>\r\n\r\n  <ngt-soba-orbit-controls\r\n    *ngIf=\"true\"\r\n    [makeDefault]=\"false\"\r\n  ></ngt-soba-orbit-controls>\r\n\r\n  <!--ngt-group (animateReady)=\"onAnimate($event.object)\">\r\n    <ngt-icosahedron-geometry #ngtGeometry=\"ngtIcosahedronGeometry\" [args]=\"[2, 2]\"></ngt-icosahedron-geometry>\r\n    <ngt-mesh-basic-material\r\n        #ngtMaterial=\"ngtMeshBasicMaterial\"\r\n        [parameters]=\"{wireframe: true, color: 'hotpink'}\"\r\n    ></ngt-mesh-basic-material>\r\n    <ngt-mesh\r\n        [position]=\"[3, 6, 4]\"\r\n        [geometry]=\"ngtGeometry.geometry\"\r\n        [material]=\"ngtMaterial.material\"\r\n    >\r\n        <ngt-soba-html [distanceFactor]=\"distanceFactor\" [parentClass]=\"parentClass\">First</ngt-soba-html>\r\n    </ngt-mesh>\r\n    <ngt-mesh\r\n        [position]=\"[10, 0, 10]\"\r\n        [geometry]=\"ngtGeometry.geometry\"\r\n        [material]=\"ngtMaterial.material\"\r\n    >\r\n        <ngt-soba-html [distanceFactor]=\"distanceFactor\" [parentClass]=\"parentClass\">Second</ngt-soba-html>\r\n    </ngt-mesh>\r\n    <ngt-mesh\r\n        [position]=\"[-20, 0, -20]\"\r\n        [geometry]=\"ngtGeometry.geometry\"\r\n        [material]=\"ngtMaterial.material\"\r\n    >\r\n        <ngt-soba-html [distanceFactor]=\"distanceFactor\" [parentClass]=\"parentClass\">Third</ngt-soba-html>\r\n    </ngt-mesh>\r\n</ngt-group-->\r\n<ngt-group (animateReady)=\"onAnimate($event.object)\">\r\n  <ngt-icosahedron-geometry #ngtGeometry=\"ngtIcosahedronGeometry\" [args]=\"[2, 2]\"></ngt-icosahedron-geometry>\r\n  <ngt-mesh-basic-material\r\n      #ngtMaterial=\"ngtMeshBasicMaterial\"\r\n      [parameters]=\"{wireframe: true, color: color }\"\r\n  ></ngt-mesh-basic-material>\r\n  <ngt-mesh\r\n      [position]=\"[3, 6, 4]\"\r\n      [geometry]=\"ngtGeometry.geometry\"\r\n      [material]=\"ngtMaterial.material\"\r\n  >\r\n      <ngt-soba-html [transform]=\"transform\" [distanceFactor]=\"distanceFactor\" [parentClass]=\"parentClass\">First</ngt-soba-html>\r\n  </ngt-mesh>\r\n  <ngt-mesh\r\n      [position]=\"[10, 0, 10]\"\r\n      [geometry]=\"ngtGeometry.geometry\"\r\n      [material]=\"ngtMaterial.material\"\r\n  >\r\n      <ngt-soba-html [transform]=\"transform\" [distanceFactor]=\"distanceFactor\" [parentClass]=\"parentClass\">Second</ngt-soba-html>\r\n  </ngt-mesh>\r\n  <ngt-mesh\r\n      [position]=\"[-20, 0, -20]\"\r\n      [geometry]=\"ngtGeometry.geometry\"\r\n      [material]=\"ngtMaterial.material\"\r\n  >\r\n      <ngt-soba-html [transform]=\"transform\" [distanceFactor]=\"distanceFactor\" [parentClass]=\"parentClass\"  [parentStyle]=\"{background: color, fontSize: '50px', padding: '10px 18px', border: '2px solid black'}\">Third</ngt-soba-html>\r\n  </ngt-mesh>\r\n  <ngt-soba-html\r\n      [sprite]=\"true\"\r\n      [transform]=\"transform\"\r\n      [distanceFactor]=\"20\"\r\n      [parentStyle]=\"{background: color, fontSize: '50px', padding: '10px 18px', border: '2px solid black'}\"\r\n      [position]=\"[5, 15, 0]\"\r\n  >\r\n      Transform Mode\r\n  </ngt-soba-html>\r\n</ngt-group>\r\n  \r\n</ngt-canvas>\r\n<ngt-soba-loader *ngIf=\"false\"></ngt-soba-loader>"
+        },
+        {
+            "name": "MystoryComponent",
+            "id": "component-MystoryComponent-cfa110782ee18e1e48b21240ed711965a3c34e9d4a30303ac6f005ff8bf587b356fc198c5e899b2dbcc7eee4915bf9f15b6e4f529d361e70280caf779c9bbdea",
+            "file": "src/app/mystory/mystory.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mystory",
+            "styleUrls": [
+                "./mystory.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mystory.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-mystory',\n  templateUrl: './mystory.component.html',\n  styleUrls: ['./mystory.component.scss']\n})\nexport class MystoryComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mystory.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<router-outlet></router-outlet>\n"
+        },
+        {
+            "name": "NgrxComponent",
+            "id": "component-NgrxComponent-edee1dd8e375806eb37af1648bbcdeb222e0f53b41bef228138666ae860e05c52423e7b6d3981ba20ca9487c4ca3b6cef45a993b8c5c07b735f052fc3ae5021a",
+            "file": "src/app/mystory/ngrx/ngrx.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-ngrx",
+            "styleUrls": [
+                "./ngrx.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./ngrx.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-ngrx',\n  templateUrl: './ngrx.component.html',\n  styleUrls: ['./ngrx.component.scss']\n})\nexport class NgrxComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./ngrx.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>ngrx works!</p>\n"
+        },
+        {
+            "name": "NgxsSimpleComponent",
+            "id": "component-NgxsSimpleComponent-7d7264483497b0b18478687e789bb2f484698d7dcc727866e9744c989240115c89bbc3e57b9dd0884cd5c76c92976b71b21d7ea6282203b19dfd619e0d0ab8ec",
+            "file": "src/app/mystory/ngxs-simple/ngxs-simple.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-ngxs-simple",
+            "styleUrls": [
+                "./ngxs-simple.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./ngxs-simple.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-ngxs-simple',\n  templateUrl: './ngxs-simple.component.html',\n  styleUrls: ['./ngxs-simple.component.scss']\n})\nexport class NgxsSimpleComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./ngxs-simple.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>ngxs-simple works!</p>\n"
         },
         {
             "name": "OptionsComponent",
@@ -9489,6 +9846,139 @@
             "templateData": "<ngt-canvas\n  [shadows]=\"true\"\n  [camera]=\"{position: cameraPosition, fov: cameraFov}\"\n  [scene]='{background: \"black\" | color}'\n  style=\"height:100vh; width: 100vw;\"\n>\n  <ngt-stats></ngt-stats>\n\n  <ng-container *ngIf=\"true\">\n    <ngt-ambient-light [intensity]=\"0.8\"></ngt-ambient-light>\n    <ngt-point-light [intensity]=\"1\" [position]=\"[0, 6, 0]\"></ngt-point-light>\n  </ng-container>\n\n  <ngt-soba-orbit-controls\n    *ngIf=\"true\"\n    [makeDefault]=\"false\"\n  ></ngt-soba-orbit-controls>\n\n  <ngt-soba-stars></ngt-soba-stars>\n  <ngt-mesh [rotation]=\"[90 | radian, 0, 0]\">\n    <ngt-plane-geometry  [args]=\"[100, 100, 4, 4]\"></ngt-plane-geometry>\n    <ngt-mesh-basic-material [parameters]=\"{ wireframe: true }\"></ngt-mesh-basic-material>\n  </ngt-mesh>\n  <ngt-axes-helper></ngt-axes-helper>\n  \n</ngt-canvas>\n<ngt-soba-loader *ngIf=\"false\"></ngt-soba-loader>"
         },
         {
+            "name": "StoryoptionsComponent",
+            "id": "component-StoryoptionsComponent-4b38b9bebf18f15a853d4fd1af310ad9ef65ae6e669ac243f75585be0623996870d9e64a15c5c847c96dd099dbe9be637d263f2fe2d794bf2697bbe5be8d3866",
+            "file": "src/app/mystory/storyoptions/storyoptions.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-storyoptions",
+            "styleUrls": [
+                "./storyoptions.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./storyoptions.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "change3D",
+                    "args": [
+                        {
+                            "name": "selected3D",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "selected3D",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "goback",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 32,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { Router, ActivatedRoute } from '@angular/router';\n\n@Component({\n  selector: 'app-storyoptions',\n  templateUrl: './storyoptions.component.html',\n  styleUrls: ['./storyoptions.component.scss']\n})\nexport class StoryoptionsComponent implements OnInit {\n\n  constructor(private route: ActivatedRoute, private router: Router) { }\n\n  ngOnInit(): void {\n  }\n  change3D(selected3D: number) {\n    switch (selected3D) {\n      case 1:\n        this.router.navigate(['marmicode'], { relativeTo: this.route });\n        break;\n      case 2:\n        this.router.navigate(['ngrx'], { relativeTo: this.route });\n        break;\n        case 3:\n          this.router.navigate(['ngrx'], { relativeTo: this.route });\n          break;\n          case 4:\n            this.router.navigate(['ngrx'], { relativeTo: this.route });\n            break;\n    }\n\n  }\n  goback() {\n    this.router.navigate(['/beforelogin'], { relativeTo: this.route });\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./storyoptions.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "route",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 9,
+                "jsdoctags": [
+                    {
+                        "name": "route",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div fxLayout=\"column\" style=\"background-color:  #FFFFB7; height:100vh;\"  style=\"overflow-x: auto;\">\n    <div fxFlex=\"grow\"  fxLayoutAlign=\"center center\" style=\"margin-top: 1em;\">\n        <p>\n            <mat-chip-list class=\"mat-chip-list-stacked\" aria-label=\"Fish selection\">\n                <mat-chip color=\"primary\" selected>Srinivasan Interactions</mat-chip>\n            </mat-chip-list>\n        </p>\n    </div>\n    <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutAlign.gt-sm=\"center center\" >\n        <div style=\"background-color: FFFFB7; margin:5em 2em;\" fxLayoutAlign=\"center center\"   >\n        \n            <mat-chip-list class=\"mat-chip-list-stacked\">\n                <button mat-raised-button color=\"primary\" fxFlexAlign=\"center\" style=\"margin-bottom: 1em;\"> State Management</button>\n                <mat-chip color=\"accent\" selected (click)=\"change3D(1)\">NgxsStore</mat-chip>\n                <mat-chip color=\"accent\" selected (click)=\"change3D(2)\">NgrxStore</mat-chip>\n                <mat-chip color=\"accent\" selected (click)=\"change3D(3)\">Rx-Angular</mat-chip>\n\n            </mat-chip-list>\n        </div>    \n        <div style=\"background-color: FFFFB7; margin:5em 2em;\" fxLayoutAlign=\"center center\">\n        \n            <mat-chip-list class=\"mat-chip-list-stacked\">\n                <button mat-raised-button color=\"primary\" fxFlexAlign=\"center\" style=\"margin-bottom: 1em;\" > Angular Tools</button>\n                <mat-chip color=\"accent\" selected (click)=\"change3D(4)\">Angular Playground</mat-chip>\n                <mat-chip color=\"accent\" selected (click)=\"change3D(5)\">Storybook</mat-chip>\n            </mat-chip-list>\n        </div>\n\n        <div style=\"background-color: FFFFB7; margin:5em 2em;\" fxLayoutAlign=\"center center\">\n        \n            <mat-chip-list class=\"mat-chip-list-stacked\">\n                <button mat-raised-button color=\"primary\" fxFlexAlign=\"center\" style=\"margin-bottom: 1em;\">Concepts to understand</button>\n                <mat-chip color=\"accent\" selected (click)=\"change3D(6)\">Angularthree</mat-chip>\n                <mat-chip color=\"accent\" selected (click)=\"change3D(7)\">Threejs</mat-chip>\n                <mat-chip color=\"accent\" selected (click)=\"change3D(8)\">shadertoy</mat-chip>\n                <mat-chip color=\"accent\" selected (click)=\"change3D(9)\">Blender-gltf</mat-chip>\n            </mat-chip-list>\n        </div>\n\n        <div style=\"background-color: FFFFB7; margin:5em 2em;\" fxLayoutAlign=\"center center\">\n        \n            <mat-chip-list class=\"mat-chip-list-stacked\">\n                <button mat-raised-button color=\"primary\" fxFlexAlign=\"center\" style=\"margin-bottom: 1em;\">Delivery expected</button>\n                <mat-chip color=\"accent\" selected (click)=\"change3D(50)\">WebGPU</mat-chip>\n            </mat-chip-list>\n        </div>\n\n    </div>\n\n    <div>\n        <div style=\"padding-bottom: 1em;\" fxFlex=\"5em\">\n    \n        </div>\n    \n        <button mat-raised-button color=\"primary\" fxFlex (click)=\"goback()\">\n          Back\n        </button>\n        <div style=\"padding-bottom: 1em;\" fxFlex=\"5em\">\n    \n        </div>\n      </div>\n      <div style=\"padding-bottom: 10px;\">\n    \n      </div>\n</div>"
+        },
+        {
             "name": "ThreejsBasicComponent",
             "id": "component-ThreejsBasicComponent-31859ad27d0958f95d1bddab4a2c713131832716f2a243a3a36be06b2922b5a95b582aba92415d62e4db2d5881cacc88125832be32c328b1f9cfa05365275f78",
             "file": "src/app/threejs-basic/threejs-basic.component.ts",
@@ -10009,13 +10499,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-e8acc699857ec2feb1864bda6611d7f320617152989543f37d5c3eb77d351464f2763b9e307d1315f2c0e7c5bc7d55aa03c2b1451b30a71015399da55895d5e3",
+            "id": "module-AppRoutingModule-5beedd4730cb445229d4307587210460040d9329d5d07a3c0aa560175b8203f22b01624dc07ccb198371916e848d17caf771e464f1f25f68d37e15b4e3824969",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [\n  \n  { path: '', redirectTo: 'beforelogin', pathMatch: 'full' },  \n  { path: 'beforelogin', loadChildren: () => \"import('./before-login/before-login.module').then(m => m.BeforeLoginModule)\" },\n  { path: 'basicthree', loadChildren: () => \"import('./threejs-basic/threejs-basic.module').then(m => m.ThreejsBasicModule)\" },\n  \n  { path: '3jssoba', loadChildren: () => \"import('./threejs-soba/threejs-soba.module').then(m => m.ThreejsSobaModule)\" }];\n\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [\n  \n  { path: '', redirectTo: 'beforelogin', pathMatch: 'full' },  \n  { path: 'beforelogin', loadChildren: () => \"import('./before-login/before-login.module').then(m => m.BeforeLoginModule)\" },\n  { path: 'basicthree', loadChildren: () => \"import('./threejs-basic/threejs-basic.module').then(m => m.ThreejsBasicModule)\" },  \n  { path: '3jssoba', loadChildren: () => \"import('./threejs-soba/threejs-soba.module').then(m => m.ThreejsSobaModule)\" },\n  \n  { path: 'stories', loadChildren: () => \"import('./mystory/mystory.module').then(m => m.MystoryModule)\" }];\n\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -10219,6 +10709,101 @@
             "file": "src/app/material/material.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\nimport { A11yModule } from '@angular/cdk/a11y';\nimport {CdkAccordionModule} from '@angular/cdk/accordion';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport { DragDropModule } from '@angular/cdk/drag-drop';\nimport { PortalModule } from '@angular/cdk/portal';\nimport { ScrollingModule } from '@angular/cdk/scrolling';\nimport { CdkStepperModule } from '@angular/cdk/stepper';\nimport { CdkTableModule } from '@angular/cdk/table';\nimport { CdkTreeModule } from '@angular/cdk/tree';\nimport { MatAutocompleteModule } from '@angular/material/autocomplete';\nimport { MatBadgeModule } from '@angular/material/badge';\nimport { MatBottomSheetModule } from '@angular/material/bottom-sheet';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatButtonToggleModule } from '@angular/material/button-toggle';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatCheckboxModule } from '@angular/material/checkbox';\nimport { MatChipsModule } from '@angular/material/chips';\nimport { MatStepperModule } from '@angular/material/stepper';\nimport { MatDatepickerModule } from '@angular/material/datepicker';\nimport { MatDialogModule } from '@angular/material/dialog';\nimport { MatDividerModule } from '@angular/material/divider';\nimport { MatExpansionModule } from '@angular/material/expansion';\nimport { MatGridListModule } from '@angular/material/grid-list';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatListModule } from '@angular/material/list';\nimport { MatMenuModule } from '@angular/material/menu';\nimport { MatNativeDateModule, MatRippleModule } from '@angular/material/core';\nimport { MatPaginatorModule } from '@angular/material/paginator';\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\nimport { MatRadioModule } from '@angular/material/radio';\nimport { MatSelectModule } from '@angular/material/select';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { MatSliderModule } from '@angular/material/slider';\nimport { MatSlideToggleModule } from '@angular/material/slide-toggle';\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\nimport { MatSortModule } from '@angular/material/sort';\nimport { MatTableModule } from '@angular/material/table';\nimport { MatTabsModule } from '@angular/material/tabs';\nimport { MatToolbarModule } from '@angular/material/toolbar';\nimport { MatTooltipModule } from '@angular/material/tooltip';\nimport { MatTreeModule } from '@angular/material/tree';\nimport { OverlayModule } from '@angular/cdk/overlay';\n \n@NgModule({\n  exports: [\n    A11yModule,\n    CdkAccordionModule,\n    ClipboardModule,\n    CdkStepperModule,\n    CdkTableModule,\n    CdkTreeModule,\n    DragDropModule,\n    MatAutocompleteModule,\n    MatBadgeModule,\n    MatBottomSheetModule,\n    MatButtonModule,\n    MatButtonToggleModule,\n    MatCardModule,\n    MatCheckboxModule,\n    MatChipsModule,\n    MatStepperModule,\n    MatDatepickerModule,\n    MatDialogModule,\n    MatDividerModule,\n    MatExpansionModule,\n    MatGridListModule,\n    MatIconModule,\n    MatInputModule,\n    MatListModule,\n    MatMenuModule,\n    MatNativeDateModule,\n    MatPaginatorModule,\n    MatProgressBarModule,\n    MatProgressSpinnerModule,\n    MatRadioModule,\n    MatRippleModule,\n    MatSelectModule,\n    MatSidenavModule,\n    MatSliderModule,\n    MatSlideToggleModule,\n    MatSnackBarModule,\n    MatSortModule,\n    MatTableModule,\n    MatTabsModule,\n    MatToolbarModule,\n    MatTooltipModule,\n    MatTreeModule,\n    OverlayModule,\n    PortalModule,\n    ScrollingModule,\n  ]\n})\nexport class MaterialModule { }",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "MystoryModule",
+            "id": "module-MystoryModule-479df41b69c2069f2e424fcff63a0597239f7e682b4671ade50560de0c78929e93c4a2e8fd894689a179754b837ac0de318c032b8d6d26c847faa016cf0bf236",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/mystory/mystory.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { AppSharedModule } from '../app-shared/app-shared.module';\nimport { MystoryRoutingModule } from './mystory-routing.module';\nimport { MystoryComponent } from './mystory.component';\nimport { MarmicodeComponent } from './marmicode/marmicode.component';\nimport { StoryoptionsComponent } from './storyoptions/storyoptions.component';\nimport { NgrxComponent } from './ngrx/ngrx.component';\nimport { NgxsSimpleComponent } from './ngxs-simple/ngxs-simple.component';\n\n\n@NgModule({\n  declarations: [\n    MystoryComponent,\n    MarmicodeComponent,\n    StoryoptionsComponent,\n    NgrxComponent,\n    NgxsSimpleComponent\n  ],\n  imports: [\n    CommonModule,\n    MystoryRoutingModule,\n    AppSharedModule\n  ]\n})\nexport class MystoryModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "MarmicodeComponent"
+                        },
+                        {
+                            "name": "MystoryComponent"
+                        },
+                        {
+                            "name": "NgrxComponent"
+                        },
+                        {
+                            "name": "NgxsSimpleComponent"
+                        },
+                        {
+                            "name": "StoryoptionsComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppSharedModule"
+                        },
+                        {
+                            "name": "MystoryRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "MystoryRoutingModule",
+            "id": "module-MystoryRoutingModule-c8cc2835872cfb45bd6d6dcbd14c1976e04c9f92b1cc31db51ad52895c9b5112b4883e48a36cc664a21f1924fb8986d2367c666dedd1a12bc7a467d83b5b797f",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/mystory/mystory-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { MystoryComponent } from './mystory.component';\n\nimport { MarmicodeComponent } from './marmicode/marmicode.component';\nimport { StoryoptionsComponent } from './storyoptions/storyoptions.component';\nimport { NgrxComponent } from './ngrx/ngrx.component';\nimport { NgxsSimpleComponent } from './ngxs-simple/ngxs-simple.component';\n\nconst routes: Routes = [{   \n  path: '',\n  component: MystoryComponent ,\n  children: [\n    {\n      path: '',\n      children: [\n        { path: '', component: StoryoptionsComponent },\n        { path: 'marmicode', component: MarmicodeComponent },\n        { path: 'ngrx', component: NgrxComponent },\n        { path: 'ngrs', component: NgxsSimpleComponent },\n        \n        \n      ]\n    }\n  ]\n}];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class MystoryRoutingModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -10872,7 +11457,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                "defaultValue": "(args) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -10892,7 +11477,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Page>",
-                "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+                "defaultValue": "(args) => ({\n  props: args,\n})"
             },
             {
                 "name": "vec",
@@ -11204,7 +11789,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                    "defaultValue": "(args) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/Header.stories.ts": [
@@ -11268,7 +11853,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Page>",
-                    "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+                    "defaultValue": "(args) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/threejs-basic/cannon-clump/cannon-clump.component.ts": [
@@ -11751,6 +12336,53 @@
                                 "module": "ThreejsSobaModule"
                             }
                         ]
+                    },
+                    {
+                        "path": "stories",
+                        "loadChildren": "./mystory/mystory.module#MystoryModule",
+                        "children": [
+                            {
+                                "kind": "module",
+                                "children": [
+                                    {
+                                        "name": "routes",
+                                        "filename": "src/app/mystory/mystory-routing.module.ts",
+                                        "module": "MystoryRoutingModule",
+                                        "children": [
+                                            {
+                                                "path": "",
+                                                "component": "MystoryComponent",
+                                                "children": [
+                                                    {
+                                                        "path": "",
+                                                        "children": [
+                                                            {
+                                                                "path": "",
+                                                                "component": "StoryoptionsComponent"
+                                                            },
+                                                            {
+                                                                "path": "marmicode",
+                                                                "component": "MarmicodeComponent"
+                                                            },
+                                                            {
+                                                                "path": "ngrx",
+                                                                "component": "NgrxComponent"
+                                                            },
+                                                            {
+                                                                "path": "ngrs",
+                                                                "component": "NgxsSimpleComponent"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "kind": "module"
+                                    }
+                                ],
+                                "module": "MystoryModule"
+                            }
+                        ]
                     }
                 ],
                 "kind": "module"
@@ -11761,6 +12393,15 @@
         "count": 0,
         "status": "low",
         "files": [
+            {
+                "filePath": ".angular-playground/sandboxes.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "SandboxesDefined",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
             {
                 "filePath": "src/app/app.component.ts",
                 "type": "component",
@@ -11777,6 +12418,51 @@
                 "name": "BeforeLoginComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/mystory/marmicode/marmicode.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MarmicodeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/mystory/mystory.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MystoryComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/mystory/ngrx/ngrx.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NgrxComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/mystory/ngxs-simple/ngxs-simple.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NgxsSimpleComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/mystory/storyoptions/storyoptions.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "StoryoptionsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -12024,6 +12710,24 @@
                 "name": "FloorComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/threejs-basic/cube/cube.component.sandbox.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "MockLoadDataService",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/threejs-basic/cube/cube.component.sandbox.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "MockRouterDataService",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
